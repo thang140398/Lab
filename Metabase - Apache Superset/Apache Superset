@@ -1,1 +1,28 @@
 
+
+
+
+
+
+
+Creating your first dashboard
+
+On the resulting page, click on the green plus sign, near the top right:
+
+Sử dụng bộ dữ liệu mẫu "example weather data" 
+https://github.com/dylburger/noaa-ghcn-weather-data
+
+Download data 
+
+curl -O ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/by_year/2015.csv.gz
+curl -O ftp://ftp.ncdc.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt
+
+gunzip 2015.csv.gz
+
+Test
+
+$ wc -l 2015.csv
+
+$ cut -d, -f1 2015.csv | sort | uniq | wc -l
+
+
