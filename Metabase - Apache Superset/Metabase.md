@@ -73,51 +73,53 @@ Ví dụ muốn xem bao nhiêu đơn hàng được đặt với subtotal lớn 
 Chọn Greater than và điền 40
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-05-53.png)
 
-
-![alt]()
-
-
-![alt]()
+Ấn Done và xem kết quả
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-06-22.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-08-31.png)
 
 
- ![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-08-38.png)
 
 
-![alt]()
+ ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-13-23.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-14-17.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-15-56.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-17-51.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-19-32.png)
 
 
-![alt]()
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-29-20.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-31-14.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-32-24.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-32-34.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-33-09.png)
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-52-53.png)
+
+
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-53-15.png)
+
+
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-53-44.png)
 
 
 ![alt]()
