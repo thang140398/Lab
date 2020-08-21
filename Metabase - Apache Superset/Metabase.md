@@ -120,7 +120,8 @@ Tạo mới Dashboard, ấn Create new dashboard
 
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-53-44.png)
 
-
-
+Ngoài ra có thể tham khảo chi tiết các chức năng của Metabase 
+ * [User](https://www.metabase.com/docs/latest/users-guide/start.html)
+ * [admin](https://www.metabase.com/docs/latest/administration-guide/start.html)
  
 
