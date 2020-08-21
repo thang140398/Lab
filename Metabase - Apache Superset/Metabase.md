@@ -76,22 +76,21 @@ Chọn Greater than và điền 40
 Ấn Done và xem kết quả
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-06-22.png)
 
-
+Tính tổng những đơn hàng đó, ấn vào Summarize, Done
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-08-31.png)
-
 
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-08-38.png)
 
-
+Để xem những đơn hàng đó đặt vào ngày nào, Ấn vào Summarize, Create at:
  ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-13-23.png)
 
 
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-14-17.png)
 
-
+Xem dạng bảng
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-15-56.png)
 
-
+Đổi sang loại biểu đồ khác, ấn vào Visualization, chọn loại loại biểu đồ
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-17-51.png)
 
 
@@ -100,19 +99,19 @@ Chọn Greater than và điền 40
 
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-29-20.png)
 
-
+Lưu lại question, ấn vào Save, điền tên và chọn Save
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-31-14.png)
 
 
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-32-24.png)
 
-
+Chọn Yes, please
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-32-34.png)
 
-
+Tạo mới Dashboard, ấn Create new dashboard
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-33-09.png)
 
-
+Điền các thông tin và Save lại
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-52-53.png)
 
 
@@ -122,7 +121,6 @@ Chọn Greater than và điền 40
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-53-44.png)
 
 
-![alt]()
- 
+
  
 
