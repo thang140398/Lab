@@ -7,7 +7,7 @@
 ## 1. Cài đặt
 *Chọn cách cài đặt bằng file jar
 
-#### Kiem tra phien ban java
+#### Kiểm tra phiên bản java
 Metabase yêu cầu phiên bản java 8 hoặc cao hơn. Dùng lệnh để xem phiên bản java trên máy:
  ```
  java -version
