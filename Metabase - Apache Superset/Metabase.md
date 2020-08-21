@@ -12,8 +12,9 @@ Metabase yêu cầu phiên bản java 8 hoặc cao hơn. Dùng lệnh để xem 
  ```
  java -version
  ```
- ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2020-47-06.png)
- Nếu version nhỏ hơn 1.8 thì cần cài phiên bản cao hơn. Có thể tham khảo [tại đây](http://openjdk.java.net/install/) hoặc dùng lệnh:
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2020-47-06.png)
+
+Nếu version nhỏ hơn 1.8 thì cần cài phiên bản cao hơn. Có thể tham khảo [tại đây](http://openjdk.java.net/install/) hoặc dùng lệnh:
  ```
  sudo apt-get install openjdk-8-jre
  ```
@@ -25,6 +26,7 @@ Metabase yêu cầu phiên bản java 8 hoặc cao hơn. Dùng lệnh để xem 
  wget https://downloads.metabase.com/v0.36.4/metabase.jar
  ```
  ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2020-55-03.png)
+
 Từ terminal, dùng lệnh:
 ```
 java -jar metabase.jar
@@ -36,3 +38,8 @@ Khi quá trình cài đặt hoàn tất:
  
  
  
+
+aaaaa
+eeee
+
+3333
