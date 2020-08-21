@@ -34,12 +34,93 @@ java -jar metabase.jar
 Khi quá trình cài đặt hoàn tất:
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2021-50-12.png)
 ## 2. Một vài tính năng cơ bản
+Sau khi cài đặt, có thể truy cập và Metabase server qua port 3000
 
+Từ trình duyệt ở máy thật truy cập vào máy ảo qua port 3000
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2021-29-38.png)
+
+Chọn ngôn ngữ
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2021-30-28.png)
+
+Điền thông tin và tạo tài khoản admin
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2021-51-35.png)
+
+Có thể kết nối đến database qua bước này. Ở đây bỏ qua
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2021-52-00.png)
+
+Có cho phép Metabase thu thập một số thông tin để hoàn thiện sản phẩm hay không
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2021-52-09.png)
+
+Ấn vào Take me to Metabase. Homepase như sau:
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2021-53-14.png)
+
+Metabase có đi kèm tập dữ liệu mẫu là Sample Dataset
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2021-59-31.png)
+
+Click Add a question ở phía trên
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-00-57.png)
+
+Chọn Simple question
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-01-42.png)
+
+Chọn bảng Order sẽ hiện ra các dữ liệu trong bảng
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-02-19.png)
+
+Ví dụ muốn xem bao nhiêu đơn hàng được đặt với subtotal lớn hơn 40$ thì tạo filter như sau:
+Ấn vào Filter, chọn Subtotal
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-04-14.png)
+
+Chọn Greater than và điền 40
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Metabase/Screenshot%20from%202020-08-21%2022-05-53.png)
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+ ![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
+
+
+![alt]()
  
  
- 
 
-aaaaa
-eeee
-
-3333
