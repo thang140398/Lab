@@ -1,7 +1,7 @@
-# ** Apache Superset **
+# **Apache Superset**
 ___
 *Ubuntu server 20.04 (máy ảo)*
-
+# 1. Cài đặt
 ### Python virtualenv
 Cài môi trường ảo:
 ```
@@ -96,4 +96,45 @@ Lần sau muốn bật lại thì chỉ cần dùng lệnh
 docker-compose start
 ```
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset/Screenshot%20from%202020-08-23%2001-27-56.png)
+
+# 2. Một số tính năng cơ bản
+
+Ấn vào Sources > Databases. Tất cả database hiện có sẽ hiện ra. Chức năng thêm database ở dấu "+" góc trên bên phải. Hiện tại chỉ có một database là example
+Ảnh
+Ấn vào Sources > Tables. Tất cả các table thuộc các database hiện có sẽ hiện ra.  Chức năng thêm bảng ở dấu "+" góc trên bên phải.
+Ảnh
+Ấn vào table "enegy_usage" để tương tác với dữ liệu trong table đó. Hiện tại nó đang chạy truy vấn tính tổng số row của table và hiện kết quả là 85
+Ảnh
+Ấn vào biểu tượng như sau và chọn View samples để xem toàn bộ dữ liệu trong bảng. Bảng này thể hiện các nguồn năng lượng (source), đối tượng, mục đích sử dụng (target) và giá trị (value)
+ảnh
+ảnh
+Sửa truy vấn để xem nguồn năng lượng nào được dùng nhiều nhất và giá trị là bao nhiêu: sửa ở bên trái
+- METRICS chọn SUM(VALUE)
+- GROUP BY chọn source
+Ấn RUN QUEQUE ở giữa hoặc RUN ở góc trên bên trái để chạy
+ảnh 
+ảnh
+Chỉ lấy 20 nguồn có giá trị lớn nhất: ROW LIMITE điền 20
+ảnh
+Chỉ lấy những đối tượng có value nằm trong khoảng 10 đến 20: ở FINTER chọn SUM(value), điền >10, SAVE, tương tự với < 20, và chạy
+4 ảnh
+Chọn cách thể hiện kết quả khác ở VISUALIZATION TYPE, chọn kiểu mong muốn. Ở đây chọn BAR CHART, và chạy:
+3 ảnh
+Tab Customize có thể sửa đổi các mục để hiển thị như mong muốn:
+anh
+Ấn vào View queue để xem truy vấn đã được thực hiện
+2 ảnh 
+Ấn Download as image để tải xuống kết quả dưới dạng ảnh
+2 ảnh 
+Có thể lưu lại queue. Trong Superset, mỗi queue được lưu gọi là Slice
+Ấn SAVE để lưu queue. Đặt tên và chọn dashboard để lưu vào. Ở đây tạo mới Dashboard 1
+2 ảnh
+Ấn Dashboard, chọn Dashboard 1 vừa tạo, để xem lại queue vừa lưu 
+3 ảnh 
+Ấn vào [ảnh] để chỉnh sửa dashboard theo ý muốn
+ảnh 
+Để cung cấp Dashboard 1 cho những người dùng khác, bấm vào Draft, nó sẽ chuyển thành Published
+2 ảnh 
+
+
 
