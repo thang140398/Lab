@@ -100,31 +100,33 @@ docker-compose start
 # 2. Một số tính năng cơ bản
 
 Ấn vào Sources > Databases. Tất cả database hiện có sẽ hiện ra. Chức năng thêm database ở ![alt]() góc trên bên phải. Hiện tại chỉ có một database là example
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2011-37-53.png)
 Ấn vào Sources > Tables. Tất cả các table thuộc các database hiện có sẽ hiện ra.  Chức năng thêm bảng ở ![alt]() góc trên bên phải.
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2011-44-34.png)
 Ấn vào table "enegy_usage" để tương tác với dữ liệu trong table đó. Hiện tại nó đang chạy truy vấn tính tổng số row của table và hiện kết quả là 85
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2011-47-55.png)
 Ấn vào biểu tượng như sau và chọn View samples để xem toàn bộ dữ liệu trong bảng. Bảng này thể hiện các nguồn năng lượng (source), đối tượng, mục đích sử dụng (target) và giá trị (value)
-![alt]()
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2011-53-47.png)
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2011-54-00.png)
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2011-55-23.png)
 Sửa truy vấn để xem nguồn năng lượng nào được dùng nhiều nhất và giá trị là bao nhiêu: sửa ở bên trái
 - METRICS chọn SUM(VALUE)
 - GROUP BY chọn source
+
 Ấn RUN QUEQUE ở giữa hoặc RUN ở góc trên bên trái để chạy
-![alt]() 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-16-35.png) 
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-17-38.png)
 Chỉ lấy 20 nguồn có giá trị lớn nhất: ROW LIMITE điền 20
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-19-03.png)
 Chỉ lấy những đối tượng có value nằm trong khoảng 10 đến 20: ở FINTER chọn SUM(value), điền >10, SAVE, tương tự với < 20, và chạy
-![alt]()
-![alt]()
-![alt]()
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-21-36.png)
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-22-57.png)
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-24-46.png)
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-25-17.png)
 Chọn cách thể hiện kết quả khác ở VISUALIZATION TYPE, chọn kiểu mong muốn. Ở đây chọn BAR CHART, và chạy:
-![alt]()
-![alt]()
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-26-10.png)
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-27-44.png)
+![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-28-25.png)
 Tab Customize có thể sửa đổi các mục để hiển thị như mong muốn:
 ![alt]()
 Ấn vào View queue để xem truy vấn đã được thực hiện
