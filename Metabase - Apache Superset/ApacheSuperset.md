@@ -168,6 +168,7 @@ Tab Customize có thể sửa đổi các mục để hiển thị như mong mu�
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-35-04.png)
 
 Có thể lưu lại queue. Trong Superset, mỗi queue được lưu gọi là Slice
+
 Ấn SAVE để lưu queue. Đặt tên và chọn dashboard để lưu vào. Ở đây tạo mới Dashboard 1
 
 ![alt](https://github.com/thang140398/Lab/blob/master/Metabase%20-%20Apache%20Superset/Picture%20for%20Apache%20Superset%202/Screenshot%20from%202020-08-23%2012-40-57.png)
