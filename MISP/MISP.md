@@ -67,7 +67,7 @@ Nếu bị lỗi port đã được dùng bởi tiến trình khác như sau
 
 ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-47-59.png)
 
-Thì port ở lệnh trên dòng thứ 2 port 443 (trước dấu : , đây là docker port) thành một port khác, ở đây đổi thành 445
+Thì đổi port ở lệnh trên dòng thứ 2 port 443 (trước dấu : , đây là docker port) thành một port khác, ở đây đổi thành 445
 
 ```
 sudo docker run -it -d \
@@ -104,46 +104,39 @@ MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
 
 ## 2. Demo
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-46-06.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-46-47.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-48-01.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-48-40.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-58-32.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-58-52.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-08-36.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-09-15.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-29-25.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-29-55.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-30-04.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-30-36.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-31-41.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-33-55.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-36-32.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-36-49.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-37-13.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-38-39.png)
 
-![alt]()
-
-![alt]()
-
-
-
-bam tab Home, day la noi hien thi tat ca Events
