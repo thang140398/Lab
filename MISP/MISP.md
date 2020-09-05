@@ -16,7 +16,7 @@ cd docker-misp
 sudo ./build.sh
 ```
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-28-51.png)
 
 #### Start container
 
@@ -28,7 +28,7 @@ docker run -it --rm \
 
 Nếu bị lỗi như sau thì chạy thay `$docker-root` bằng `/$USER`
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-50-17.png)
 
 ```
 docker run -it --rm \
@@ -36,7 +36,8 @@ docker run -it --rm \
     harvarditsecurity/misp /init-db
 ```
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-46-49.png)
+
 
 Tùy theo ở trên chạy `$docker-root` hay `/$USER` để chạy một trong 2 lệnh sau (chỉ khác `$docker-root` và `/$USER`)
 
@@ -64,7 +65,7 @@ sudo docker run -it -d \
 
 Nếu bị lỗi port đã được dùng bởi tiến trình khác như sau 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-47-59.png)
 
 Thì port ở lệnh trên dòng thứ 2 port 443 (trước dấu : , đây là docker port) thành một port khác, ở đây đổi thành 445
 
@@ -78,7 +79,7 @@ sudo docker run -it -d \
     harvarditsecurity/misp
 ```
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-48-17.png)
 
 #### Truy cập bằng trình duyệt web qua localhost theo port ở trên
 
@@ -92,7 +93,23 @@ Password: admin
 ```
 
 MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
-  
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-15-49.png)
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-16-15.png)
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-24-27.png)
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-24-35.png)
+
+## 2. Demo
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
 ![alt]()
 
 ![alt]()
@@ -101,7 +118,31 @@ MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
 
 ![alt]()
 
-## 2. Một số tính năng
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
 
 
 
