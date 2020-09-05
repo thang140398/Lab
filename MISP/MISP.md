@@ -1,14 +1,107 @@
+#  **MISP**
 
+*MISP-Malware Information Sharing Platform là nền tảng chia sẽ mối đe dọa mã nguồn mở*
 
+## 1. Tải xuống và cài đặt
 
+*Tham khảo tại `https://www.misp-project.org/download/`*
 
+*MISP docker container cung cấp bởi Ventz Petkov*
 
+#### Build Docker container
 
+```
+git clone https://github.com/harvard-itsecurity/docker-misp.git
+cd docker-misp
+sudo ./build.sh
+```
 
+![alt]()
 
+#### Start container
 
+```
+docker run -it --rm \
+    -v $docker-root/misp-db:/var/lib/mysql \
+    harvarditsecurity/misp /init-db
+```
 
-2. Demo
+Nếu bị lỗi như sau thì chạy thay `$docker-root` bằng `/$USER`
+
+![alt]()
+
+```
+docker run -it --rm \
+    -v /$USER/misp-db:/var/lib/mysql \
+    harvarditsecurity/misp /init-db
+```
+
+![alt]()
+
+Tùy theo ở trên chạy `$docker-root` hay `/$USER` để chạy một trong 2 lệnh sau (chỉ khác `$docker-root` và `/$USER`)
+
+```
+sudo docker run -it -d \
+    -p 443:443 \
+    -p 80:80 \
+    -p 3306:3306 \
+    -p 6666:6666 \
+    -v $docker-root/misp-db:/var/lib/mysql \
+    harvarditsecurity/misp
+```
+
+hoặc
+
+```
+sudo docker run -it -d \
+    -p 443:443 \
+    -p 80:80 \
+    -p 3306:3306 \
+    -p 6666:6666 \
+    -v /$USER/misp-db:/var/lib/mysql \
+    harvarditsecurity/misp
+```
+
+Nếu bị lỗi port đã được dùng bởi tiến trình khác như sau 
+
+![alt]()
+
+Thì port ở lệnh trên dòng thứ 2 port 443 (trước dấu : , đây là docker port) thành một port khác, ở đây đổi thành 445
+
+```
+sudo docker run -it -d \
+    -p 445:443 \
+    -p 80:80 \
+    -p 3306:3306 \
+    -p 6666:6666 \
+    -v /$USER/misp-db:/var/lib/mysql \
+    harvarditsecurity/misp
+```
+
+![alt]()
+
+#### Truy cập bằng trình duyệt web qua localhost theo port ở trên
+
+```
+https://localhost:445
+```
+
+```
+Login: admin@admin.test
+Password: admin
+```
+
+MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
+  
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+## 2. Một số tính năng
 
 
 
