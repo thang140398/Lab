@@ -6,9 +6,28 @@
 
 *Tham khảo tại `https://www.misp-project.org/download/`*
 
-*MISP docker container cung cấp bởi Ventz Petkov*
+### Dùng shell script AutoMISP
+
+*https://github.com/da667/AutoMISP*
+
+Lấy shell script từ địa chỉ trên về
+
+```
+wget https://raw.githubusercontent.com/da667/AutoMISP/master/auto-MISP-ubuntu.sh
+```
+
+Chạy
+```
+chmod +x auto-MISP-ubuntu.sh
+./auto-MISP-ubuntu.sh
+```
+
+
+### Dùng Docker containers
 
 #### Build Docker container
+
+*MISP docker container cung cấp bởi Ventz Petkov*
 
 ```
 git clone https://github.com/harvard-itsecurity/docker-misp.git
