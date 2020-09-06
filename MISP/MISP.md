@@ -52,6 +52,18 @@ sudo apt-get install python3 python-dev python3-dev \
 
 ```
 
+*The directory '/home/u/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pi$
+The directory '/home/u/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with $*
+
+![alt]()
+
+Đổi thành chạy bằng người dùng root và chạy lại script
+
+```
+sudo su -
+bash auto-MISP-ubuntu.sh
+```
+
 
 ### Dùng Docker containers
 
