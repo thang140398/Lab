@@ -34,13 +34,22 @@ Một số lỗi có thể gặp và cách sửa
 
 *error: command 'x86_64-linux-gnu-gcc' failed with exit status 1* 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP%202/Screenshot%20from%202020-09-03%2017-07-11.png)
 
 ```
 sudo apt-get install python3 python-dev python3-dev \
      build-essential libssl-dev libffi-dev \
      libxml2-dev libxslt1-dev zlib1g-dev \
      python-pip
+```
+
+*gnutls_handshake() failed: Error in the pull function*
+
+![alt]
+
+```
+ apt-get -y install build-essential nghttp2 libnghttp2-dev libssl-dev
+
 ```
 
 
@@ -129,10 +138,16 @@ sudo docker run -it -d \
 https://localhost:445
 ```
 
+## 2. Demo
+
+Truy cập qua localhost hoặc địa chỉ của máy ảo cài đặt MISP
+Đăng nhập với tài khoản và mật khẩu như sau
+
 ```
 Login: admin@admin.test
 Password: admin
 ```
+
 
 MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
 
@@ -144,7 +159,7 @@ MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
 
 ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-24-35.png)
 
-## 2. Demo
+
 
 ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-46-06.png)
 
