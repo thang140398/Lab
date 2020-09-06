@@ -8,7 +8,7 @@
 
 ### Dùng shell script AutoMISP
 
-*https://github.com/da667/AutoMISP*
+`https://github.com/da667/AutoMISP`
 
 Lấy shell script từ địa chỉ trên về
 
@@ -22,12 +22,35 @@ chmod +x auto-MISP-ubuntu.sh
 ./auto-MISP-ubuntu.sh
 ```
 
+Trong quá trình cài đặt nếu lỗi thì check file log
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP%202/Screenshot%20from%202020-09-03%2019-16-14.png)
+
+```
+nano /var/log/misp_install.log
+```
+
+Một số lỗi có thể gặp và cách sửa
+
+*error: command 'x86_64-linux-gnu-gcc' failed with exit status 1* 
+
+![alt]()
+
+```
+sudo apt-get install python3 python-dev python3-dev \
+     build-essential libssl-dev libffi-dev \
+     libxml2-dev libxslt1-dev zlib1g-dev \
+     python-pip
+```
+
 
 ### Dùng Docker containers
 
+*MISP docker container cung cấp bởi Ventz Petkov*
+
+
 #### Build Docker container
 
-*MISP docker container cung cấp bởi Ventz Petkov*
 
 ```
 git clone https://github.com/harvard-itsecurity/docker-misp.git
