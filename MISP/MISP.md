@@ -228,73 +228,86 @@ MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
 
 aaaaaaaaaaaaaaaa
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2010-55-04.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2010-56-04.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2010-56-42.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2010-57-24.png)
 
 Bấm tab Home là nơi tất cả Event được hiển thị
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2010-58-09.png)
 
 Sync Actions > List Feeds để xem danh sách nguồn cung cấp dữ liệu
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-27-10.png)
 
 Hiện có hai nguồn cung cấp dữ liệu đi kèm với MISP
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-27-20.png)
 
 Ấn Load default feed metadata, có tới 60 nguồn cung cấp 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-27-41.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-27-45.png)
 
 Bật nguồn cung cấp dữ liệu để chúng hoạt động 
 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-27-53.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-27-58.png)
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-28-04.png)
 
 Ấn Fetch and store all feed data, quay lại Home
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-35-27.png)
 
-![alt]()
+
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-37-39.png)
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2011-37-46.png)
 
 
 Administration > Jobs 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2013-02-22.png)
 
-![alt]()
+View Event 
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-17-02.png)
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-17-11.png)
 
 Add Event 
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-26-10.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-26-15.png)
 
-Bấm vào 
+Bấm vào  ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-26-26.png) 
 
-![alt]() 
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-27-43.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-28-10.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-29-23.png)
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-30-00.png)
+
+
 
 Administration > Server Setting & Maintenance  
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-30-35.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-30-39.png)
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2012-30-56.png)
 
-![alt]()
 
