@@ -226,3 +226,75 @@ MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
 
 ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-38-39.png)
 
+aaaaaaaaaaaaaaaa
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+Bấm tab Home là nơi tất cả Event được hiển thị
+
+![alt]()
+
+Sync Actions > List Feeds để xem danh sách nguồn cung cấp dữ liệu
+
+![alt]()
+
+Hiện có hai nguồn cung cấp dữ liệu đi kèm với MISP
+
+![alt]()
+
+Ấn Load default feed metadata, có tới 60 nguồn cung cấp 
+
+![alt]()
+
+![alt]()
+
+Bật nguồn cung cấp dữ liệu để chúng hoạt động 
+
+
+![alt]()
+
+![alt]()
+
+Ấn Fetch and store all feed data, quay lại Home
+
+![alt]()
+
+![alt]()
+
+
+Administration > Jobs 
+
+![alt]()
+
+![alt]()
+
+Add Event 
+
+![alt]()
+
+![alt]()
+
+Bấm vào 
+
+![alt]() 
+
+![alt]()
+
+![alt]()
+
+Administration > Server Setting & Maintenance  
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
+![alt]()
+
