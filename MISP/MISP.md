@@ -34,6 +34,8 @@ Một số lỗi có thể gặp và cách sửa
 
 *error: command 'x86_64-linux-gnu-gcc' failed with exit status 1* 
 
+*error: fuzzy.h: No such file or directory*
+
 ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP%202/Screenshot%20from%202020-09-03%2017-07-11.png)
 
 ```
@@ -41,6 +43,10 @@ sudo apt-get install python3 python-dev python3-dev \
      build-essential libssl-dev libffi-dev \
      libxml2-dev libxslt1-dev zlib1g-dev \
      python-pip
+```
+
+```
+apt-get -y install libfuzzy-dev
 ```
 
 *gnutls_handshake() failed: Error in the pull function*
@@ -63,6 +69,12 @@ The directory '/home/u/.cache/pip' or its parent directory is not owned by the c
 sudo su -
 bash auto-MISP-ubuntu.sh
 ```
+
+*fatal: destination path 'misp-modules' already exists and is not an empty directory*
+
+![alt]()
+
+Trường hợp này cần xóa folder misp-modules ở vị trí `/usr/local/src/misp-modules` 
 
 
 ### Dùng Docker containers
