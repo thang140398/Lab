@@ -10,6 +10,8 @@
 
 `https://github.com/da667/AutoMISP`
 
+*Ubuntu 18.04.5*
+
 Lấy shell script từ địa chỉ trên về
 
 ```
@@ -51,17 +53,18 @@ apt-get -y install libfuzzy-dev
 
 *gnutls_handshake() failed: Error in the pull function*
 
-![alt]
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP%202/Screenshot%20from%202020-09-03%2017-24-46.png)
 
 ```
  apt-get -y install build-essential nghttp2 libnghttp2-dev libssl-dev
 
 ```
 
-*The directory '/home/u/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pi$
-The directory '/home/u/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with $*
+*The directory '/home/u/.cache/pip/http' or its parent directory is not owned by the current user and the cache has been disabled. Please check the permissions and owner of that directory. If executing pi$...*
 
-![alt]()
+*The directory '/home/u/.cache/pip' or its parent directory is not owned by the current user and caching wheels has been disabled. check the permissions and owner of that directory. If executing pip with $...*
+
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP%202/Screenshot%20from%202020-09-03%2021-23-25.png)
 
 Đổi thành chạy bằng người dùng root và chạy lại script
 
@@ -72,9 +75,11 @@ bash auto-MISP-ubuntu.sh
 
 *fatal: destination path 'misp-modules' already exists and is not an empty directory*
 
-![alt]()
+![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP%202/Screenshot%20from%202020-09-06%2015-49-39.png)
 
 Trường hợp này cần xóa folder misp-modules ở vị trí `/usr/local/src/misp-modules` 
+
+Sau khi cài đặt vào trình duyệt truy cập địa chỉ ip của host cài đặt MISP
 
 
 ### Dùng Docker containers
