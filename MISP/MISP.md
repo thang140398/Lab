@@ -178,59 +178,14 @@ Password: admin
 ```
 
 
-MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-15-49.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-16-15.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-24-27.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2019-24-35.png)
-
-
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-46-06.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-46-47.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-48-01.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-48-40.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-58-32.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2020-58-52.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-08-36.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-09-15.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-29-25.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-29-55.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-30-04.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-30-36.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-31-41.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-33-55.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-36-32.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-36-49.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-37-13.png)
-
-![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP.md/Screenshot%20from%202020-09-04%2021-38-39.png)
-
-aaaaaaaaaaaaaaaa
 
 ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2010-55-04.png)
 
 ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2010-56-04.png)
+
+
+MISP yêu cầu đổi mật khẩu ngay sau khi đăng nhập
+
 
 ![alt](https://github.com/thang140398/Lab/blob/master/MISP/Picture%20for%20MISP/Screenshot%20from%202020-09-07%2010-56-42.png)
 
