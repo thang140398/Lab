@@ -31,27 +31,29 @@ Bridge commands:
   
   br-to-parent BRIDGE         hiện parent của BRIDGE
   
-  br-set-external-id BRIDGE KEY VALUE  set KEY on BRIDGE to VALUE
+  br-set-external-id BRIDGE KEY VALUE  đặt KEY trên BRIDGE là VALUE
   
   
-  br-set-external-id BRIDGE KEY  unset KEY on BRIDGE
+  br-set-external-id BRIDGE KEY  hủy cài đặt KEY trên BRIDGE
   
-  br-get-external-id BRIDGE KEY  print value of KEY on BRIDGE
+  br-get-external-id BRIDGE KEY  hiển thị giá trị KEY on BRIDGE
   
-  br-get-external-id BRIDGE  list key-value pairs on BRIDGE
-Port commands (a bond is considered to be a single port):
+  br-get-external-id BRIDGE  liệt kê các cặp key-value trên BRIDGE
   
-  list-ports BRIDGE           print the names of all the ports on BRIDGE
+Port commands (a bond is considered to be a single port - một liên kết được coi là một cổng duy nhất):
   
-  add-port BRIDGE PORT        add network device PORT to BRIDGE
+  list-ports BRIDGE           liệt kê tên tất cả các port trên bridge có tên BRIDGE
   
-  add-bond BRIDGE PORT IFACE...  add bonded port PORT in BRIDGE from IFACES
+  add-port BRIDGE PORT        thêm network device PORT vào BRIDGE
   
-  del-port [BRIDGE] PORT      delete PORT (which may be bonded) from BRIDGE
+  add-bond BRIDGE PORT IFACE...  thêm bonded port PORT vào BRIDGE từ IFACES
+  
+  del-port [BRIDGE] PORT      xóa PORT (có thể đã được liên kết) của BRIDGE
   
   
-  port-to-br PORT             print name of bridge that contains PORT
-Interface commands (a bond consists of multiple interfaces):
+  port-to-br PORT             hiện tên bridge chứa PORT
+
+Interface commands (a bond consists of multiple interfaces - một liên kết bao gồm nhiều giao diện):
   
   list-ifaces BRIDGE          print the names of all interfaces on BRIDGE
   
