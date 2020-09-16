@@ -4,6 +4,8 @@
 
 ```ovs-dpctl [options] command [switch] [args...]```
 
+#### Command
+
   `add-dp DP [IFACE...]`   -  thêm mới datapath DP (with IFACEs)
   
   `del-dp DP`            -    xóa local datapath DP
@@ -44,7 +46,7 @@ Interface table in ovs-vswitchd.conf.db(5) for an options list.
 For COMMAND dump-flows, add-flow, mod-flow, del-flow and
 del-flows, DP is optional if there is only one datapath.*
 
-Logging options:
+#### Logging options:
 
   `-vSPEC`, `--verbose=SPEC` -  set logging levels
   
@@ -57,18 +59,18 @@ Logging options:
   `--syslog-target=HOST:PORT` - also send syslog msgs to HOST:PORT via UDP
   
 
-Options for show and mod-flow:
+#### Options for show and mod-flow:
 
   `-s`,  `--statistics`     -     hiện số liệu thống kê cho port hoặc flow
 
-Options for dump-flows:
+#### Options for dump-flows:
 
   `-m`, `--more`           -       increase verbosity of output
   
   `--names`            -         use port names in output
   
 
-Options for mod-flow:
+#### Options for mod-flow:
   `--may-create`        -        tạo flow nếu chưa tồn tại
   
   `--read-only`        -         không chạy lệnh read/write 
@@ -76,7 +78,7 @@ Options for mod-flow:
   `--clear`            -        đặt lại số liệu thống kê hiện có về không
   
 
-Other options:
+#### Other options:
   `-t`, `--timeout=SECS`    -      give up after SECS seconds
   
   `-h`, `--help`            -      display this help message
