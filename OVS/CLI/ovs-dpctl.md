@@ -1,5 +1,7 @@
-ovs-dpctl: Open vSwitch datapath management utility
-usage: ovs-dpctl [OPTIONS] COMMAND [ARG...]
+# ovs-dpctl: quản lý Open vSwitch datapath 
+## cách sử dụng: 
+```ovs-dpctl [options] command [switch] [args...]```
+
   add-dp DP [IFACE...]     add new datapath DP (with IFACEs)
   del-dp DP                delete local datapath DP
   add-if DP IFACE...       add each IFACE as a port on DP
