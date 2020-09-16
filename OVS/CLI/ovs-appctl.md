@@ -18,11 +18,12 @@
   
   `vlog/set [SPEC]` - Đặt các mức nhật ký như được nêu chi tiết trong SPEC, có thể bao gồm:
       
-      A valid module name (all modules, by default)
+  
+   A valid module name (all modules, by default)
       
-      'syslog', 'console', 'file' (all facilities, by default))
+   'syslog', 'console', 'file' (all facilities, by default))
       
-      'off', 'emer', 'err', 'warn', 'info', or 'dbg' ('dbg', bydefault)
+   'off', 'emer', 'err', 'warn', 'info', or 'dbg' ('dbg', bydefault)    
       
   `vlog/reopen`  -      tạo chương trình mở lại tệp nhật ký của nó
   
