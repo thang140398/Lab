@@ -1,13 +1,13 @@
-ovs-vsctl : dùng để truy vấn và cấu hình ovs-vswitchd
+# `ovs-vsctl` : truy vấn và cấu hình ovs-vswitchd
 
-cách sử dụng : 
+## Cách sử dụng : 
 
-       `ovs-vsctl [options] -- [options] command [args] [-- [options] command [args]]...`
-
-
+       ```ovs-vsctl [options] -- [options] command [args] [-- [options] command [args]]...```
 
 
-Open vSwitch commands:
+
+
+### Open vSwitch commands:
 
   init                        khởi tạo database
   
@@ -15,7 +15,7 @@ Open vSwitch commands:
   
   emer-reset                  reset cấu hình về clean state
 
-Bridge commands:
+### Bridge commands:
   
   add-br BRIDGE               tạo bridge mới có tên BRIDGE
   
@@ -40,7 +40,7 @@ Bridge commands:
   
   br-get-external-id BRIDGE  liệt kê các cặp key-value trên BRIDGE
   
-Port commands (a bond is considered to be a single port - một liên kết được coi là một cổng duy nhất):
+### Port commands (a bond is considered to be a single port - một liên kết được coi là một cổng duy nhất):
   
   list-ports BRIDGE           liệt kê tên tất cả các port trên bridge có tên BRIDGE
   
@@ -53,160 +53,159 @@ Port commands (a bond is considered to be a single port - một liên kết đư
   
   port-to-br PORT             hiện tên bridge chứa PORT
 
-Interface commands (a bond consists of multiple interfaces - một liên kết bao gồm nhiều giao diện):
+### Interface commands (a bond consists of multiple interfaces - một liên kết bao gồm nhiều giao diện):
   
-  list-ifaces BRIDGE          print the names of all interfaces on BRIDGE
+  list-ifaces BRIDGE          hiện tên tất cả interface trên BRIDGE
   
-  iface-to-br IFACE           print name of bridge that contains IFACE
-Controller commands:
+  iface-to-br IFACE           hiện tên bridge có chứa IFACE
   
-  get-controller BRIDGE      print the controllers for BRIDGE
+### Controller commands:
   
-  del-controller BRIDGE      delete the controllers for BRIDGE
+  get-controller BRIDGE      hiện controllers dùng cho BRIDGE
   
-  set-controller BRIDGE TARGET...  set the controllers for BRIDGE
+  del-controller BRIDGE      xóa controllers cho BRIDGE
   
-  get-fail-mode BRIDGE       print the fail-mode for BRIDGE
+  set-controller BRIDGE TARGET...  thiết lập controllers cho BRIDGE
   
-  del-fail-mode BRIDGE       delete the fail-mode for BRIDGE
+  get-fail-mode BRIDGE       hiện fail-mode cho BRIDGE
   
-  set-fail-mode BRIDGE MODE  set the fail-mode for BRIDGE to MODE
-Manager commands:
+  del-fail-mode BRIDGE       xóa fail-mode cho BRIDGE
   
-  get-manager                print the managers
+  set-fail-mode BRIDGE MODE  thiết lập fail-mode cho BRIDGE thành MODE
   
-  del-manager                delete the managers
+### Manager commands:
   
-  set-manager TARGET...      set the list of managers to TARGET...
-SSL commands:
+  get-manager                hiện managers
   
-  get-ssl                     print the SSL configuration
+  del-manager                xóa managers
   
-  del-ssl                     delete the SSL configuration
+  set-manager TARGET...      thiết lập danh sách các managers từ TARGET...
   
-  set-ssl PRIV-KEY CERT CA-CERT  set the SSL configuration
-Switch commands:
+### SSL commands:
   
-  emer-reset                  reset switch to known good state
-Database commands:
+  get-ssl                     hiện cấu hình cài đặt SSL 
   
-  list TBL [REC]              list RECord (or all records) in TBL
+  del-ssl                     xóa cấu hình cài đặt SSL 
   
-  find TBL CONDITION...       list records satisfying CONDITION in TBL
+  set-ssl PRIV-KEY CERT CA-CERT  cài đặt cấu hình SSL 
   
-  get TBL REC COL[:KEY]       print values of COLumns in RECord in TBL
+### Auto Attach commands:
+
+  add-aa-mapping BRIDGE I-SID VLAN   add Auto Attach mapping to BRIDGE
   
-  set TBL REC COL[:KEY]=VALUE set COLumn values in RECord in TBL
+  del-aa-mapping BRIDGE I-SID VLAN   delete Auto Attach mapping VLAN from BRIDGE
   
-  add TBL REC COL [KEY=]VALUE add (KEY=)VALUE to COLumn in RECord in TBL
+  get-aa-mapping BRIDGE              get Auto Attach mappings from BRIDGE
+
+
+
   
-  remove TBL REC COL [KEY=]VALUE  remove (KEY=)VALUE from COLumn
+### Switch commands:
   
-  clear TBL REC COL           clear values from COLumn in RECord in TBL
+  emer-reset                  reset switch về trạng thái tốt nhất đã biết
   
-  create TBL COL[:KEY]=VALUE  create and initialize new record
+### Database commands:
   
-  destroy TBL REC             delete RECord from TBL
+  list TBL [REC]              liệt kê RECord (hoặc tất cả records) trong TBL
   
-  wait-until TBL REC [COL[:KEY]=VALUE]  wait until condition is true
-Potentially unsafe database commands require --force option.
-Options:
-  --db=DATABASE               connect to DATABASE
-                              (default: unix:/ovs/var/run/openvswitch/db.sock)
+  find TBL CONDITION...       liệt kê records thỏa mãn CONDITION trong TBL
   
-  --no-wait                   do not wait for ovs-vswitchd to reconfigure
+  get TBL REC COL[:KEY]       hiện giá trị cột của RECord trong TBL
   
-  --retry                     keep trying to connect to server forever
+  set TBL REC COL[:KEY]=VALUE đặt giá trị cột của RECord trong TBL
   
-  -t, --timeout=SECS          wait at most SECS seconds for ovs-vswitchd
+  add TBL REC COL [KEY=]VALUE thêm (KEY=)VALUE vào cột của RECord trong TBL
   
-  --dry-run                   do not commit changes to database
+  remove TBL REC COL [KEY=]VALUE  loại bỏ (KEY=)VALUE từ cột
   
+  clear TBL REC COL           dọn sạch giá trị cột của RECord trong TBL
   
-  --oneline                   print exactly one line of output per command
-Pica commands:
+  create TBL COL[:KEY]=VALUE  khởi tạo record mới
   
-  set-match-mode MODE:OPTIONS=PRIORITY          set match-modes
+  destroy TBL REC             xóa RECord từ TBL
   
-  show-match-mode                               print current match-modes
+  wait-until TBL REC [COL[:KEY]=VALUE]  đợi đến khi điều kiện đúng
   
-  set-cos-map TRUE|FALSE                        enable or disable cos-mapping
+** Các lệnh cơ sở dữ liệu tiềm ẩn không an toàn yêu cầu tùy chọn --force. ** 
+
+### Options:
+
+  --db=DATABASE               kết nối tới DATABASE                 (mặc định: unix:/ovs/var/run/openvswitch/db.sock)
   
-  show-cos-map [IFACE]                          show cos-mapping
+  --no-wait                   không đợi ovs-vswitchd cấu hình lại
   
-  enable-egress-mode TRUE|FALSE                 enable or disable egress-mode
+  --retry                     luôn cố gắng kết nối đến máy chỉ
   
-  show-egress-mode                              show egress-mode
+  -t, --timeout=SECS          đợi tối đa SECS giây cho ovs-vswitchd
   
-  set-combinated-mode TRUE|FALSE                enable or disable combinated-mode
+  --dry-run                   không commit changes tới database
   
-  show-combinated-mode                          show combinated-mode
   
-  set-qe-port-mode normal|half|max              set port-mode
+  --oneline                   in chính xác một dòng đầu ra cho mỗi lệnh
   
-  show-qe-port-mode                             show port-mode
   
-  set-l2gre-key-length                          set l2gre key length
+### Output formatting options:
+
+  -f, --format=FORMAT         đặt định dạng output là FORMAT            ("table", "html", "csv", or "json")
+                              
+  -d, --data=FORMAT           đặt định dạng table cell output là     FORMAT ("string", "bare", or "json")
+                              
+  --no-headings               bỏ qua hàng tiêu đề bảng
   
-  show-l2gre-key-length                         show l2gre key length
+  --pretty                    pretty-print JSON ở output
   
-  set-proxy-arp TRUE|FALSE SUBNETS              set proxy arp
+  --bare                      tương đương với "--format=list --data=bare --no-headings"
+
   
-  show-proxy-arp                                show proxy arp
   
-  set-l2-mode TRUE|FALSE [TABLE]                set l2 mode
+### Logging options:
   
-  show-l2-mode                                  show l2 mode
+  -vSPEC, --verbose=SPEC   đặt logging levels
   
-  set-l3-mode TRUE|FALSE [TABLE]                set l3 mode
+  -v, --verbose            đặt mức độ chi tiết tối đa
   
-  show-l3-mode                                  show l3 mode
+  --log-file[=FILE]        cho phép ghi log vào FILE               (mặc định: /ovs/var/log/openvswitch/ovs-vsctl.log)
   
-  set-l2-l3-buffer-mode [0, 5]                  set l2/l3 buffer mode(0-5)
+  --syslog-target=HOST:PORT  cũng gửi syslog msgs tới HOST:PORT qua UDP
   
-  show-l2-l3-buffer-mode                        show l2/l3 buffer mode
+  --no-syslog             tương đương với --verbose=vsctl:syslog:warn
   
-  set-l2-l3-preference TRUE|FALSE               set l2/l3 flow preference
-  
-  show-l2-l3-preference                         show l2/l3 flow preference
-  
-  set-max-ecmp-ports NUM                        set l3 max ecmp ports to NUM(2~32 and a power of 2)
-  
-  
-  show-max-ecmp-ports                           show l3 max ecmp ports
-  
-  set-lag-advance-hash-mapping-fields FIELDS    set hash fields of advance hash-mapping
-  
-  show-lag-advance-hash-mapping-fields          show hash fields of advance hash-mapping
-  
-  set-udf-mode MODE                             set udf mode, MODE's format is udfN(l2|l3,offset=OFS,length=LEN),...
-                                                only up to 4 udfs(udf0,udf1,udf2,udf3) are supported
-  
-  show-udf-mode                                 show udf mode
-Logging options:
-  
-  -vSPEC, --verbose=SPEC   set logging levels
-  
-  -v, --verbose            set maximum verbosity level
-  
-  --log-file[=FILE]        enable logging to specified FILE
-                           (default: /ovs/var/log/openvswitch/ovs-vsctl.log)
-  
-  --syslog-target=HOST:PORT  also send syslog msgs to HOST:PORT via UDP
-  
-  --no-syslog             equivalent to --verbose=vsctl:syslog:warn
-Active database connection methods:
+### Active database connection methods:
+
   tcp:IP:PORT             PORT at remote IP
+  
   ssl:IP:PORT             SSL PORT at remote IP
+  
   unix:FILE               Unix domain socket named FILE
-Passive database connection methods:
+  
+### Passive database connection methods:
+
   ptcp:PORT[:IP]          listen to TCP PORT on IP
+  
   pssl:PORT[:IP]          listen for SSL on PORT on IP
+  
   punix:FILE              listen on Unix domain socket FILE
-PKI configuration (required to use SSL):
+  
+### PKI configuration (required to use SSL):
+
   -p, --private-key=FILE  file with private key
+  
   -c, --certificate=FILE  file with certificate for private key
+  
+  
   -C, --ca-cert=FILE      file with peer CA certificate
-Other options:
-  -h, --help                  display this help message
-  -V, --version               display version information
+  
+
+### SSL options:
+
+  --ssl-protocols=PROTOS  danh sách SSL protocols để enable
+  
+  --ssl-ciphers=CIPHERS   danh sách SSL ciphers để enable
+  
+
+
+### Other options:
+
+  -h, --help                  hiển thị hướng dẫn
+  
+  -V, --version               hiển thị thông tin phiên bản
