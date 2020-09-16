@@ -2,6 +2,8 @@
 
 ## cách sử dụng: 
 
+#### Command
+
 ```ovsdb-tool [OPTIONS] COMMAND [ARG...]```
 
 
@@ -49,7 +51,7 @@
 
 *The default SCHEMA is /usr/share/openvswitch/vswitch.ovsschema.*
 
-Logging options:
+#### Logging options:
 
   `-vSPEC`, `--verbose=SPEC` -  set logging levels
   
@@ -61,7 +63,7 @@ Logging options:
   
   `--syslog-target=HOST:PORT` - also send syslog msgs to HOST:PORT via UDP
 
-Other options:
+#### Other options:
 
   `-m`, `--more`          -        increase show-log verbosity
   
