@@ -4,56 +4,56 @@ usage: ovsdb-client [OPTIONS] COMMAND [ARG...]
 Valid commands are:
 
   list-dbs [SERVER]
-    list databases available on SERVER
+    liệt kê databases có sẵn trên SERVER
 
   get-schema [SERVER] [DATABASE]
-    retrieve schema for DATABASE from SERVER
+    truy xuất lược đồ cho DATABASE từ SERVER
 
   get-schema-version [SERVER] [DATABASE]
-    retrieve schema for DATABASE from SERVER and report only its
-    version number on stdout
+        truy xuất lược đồ cho DATABASE từ SERVER và chỉ báo cáo
+    số phiên bản trên stdout
 
   get-schema-cksum [SERVER] [DATABASE]
-    retrieve schema for DATABASE from SERVER and report only its
-    checksum on stdout
+    truy xuất lược đồ cho DATABASE từ SERVER và chỉ báo cáo
+    tổng kiểm tra trên stdout
 
   list-tables [SERVER] [DATABASE]
-    list tables for DATABASE on SERVER
+    liệt kê các bảng cho DATABASE trên SERVER
 
   list-columns [SERVER] [DATABASE] [TABLE]
-    list columns in TABLE (or all tables) in DATABASE on SERVER
-
+     liệt kê các cột trong TABLE (hoặc tất cả các bảng) trong DATABASE trên SERVER
+     
   transact [SERVER] TRANSACTION
-    run TRANSACTION (params for "transact" request) on SERVER
-    and print the results as JSON on stdout
+    chạy TRANSACTION (thông số cho yêu cầu "transact") trên SERVER
+    và in kết quả dưới dạng JSON trên stdout
 
   query [SERVER] TRANSACTION
-    run TRANSACTION (params for "transact" request) on SERVER,
-    as read-only, and print the results as JSON on stdout
+    chạy TRANSACTION (thông số cho yêu cầu "transact") trên SERVER,
+    dưới dạng chỉ đọc và in kết quả dưới dạng JSON trên stdout
 
   monitor [SERVER] [DATABASE] TABLE [COLUMN,...]...
-    monitor contents of COLUMNs in TABLE in DATABASE on SERVER.
-    COLUMNs may include !initial, !insert, !delete, !modify
-    to avoid seeing the specified kinds of changes.
+  
+   theo dõi nội dung của COLUMN trong TABLE trong DATABASE trên SERVER.
+    COLUMN có thể bao gồm !initial, !insert, !delete, !modify
+    để tránh nhìn thấy the specified kinds of changes.
 
   monitor-cond [SERVER] [DATABASE] CONDITION TABLE [COLUMN,...]...
-    monitor contents that match CONDITION of COLUMNs in TABLE in
-    DATABASE on SERVER.
-    COLUMNs may include !initial, !insert, !delete, !modify
-    to avoid seeing the specified kinds of changes.
+    mtheo dõi nội dung khớp với CONDITION của COLUMN trong TABLE trong
+    CƠ SỞ DỮ LIỆU trên MÁY CHỦ.
+    COLUMNs có thể bao gồm !initial, !insert, !delete, !modify
+    để tránh nhìn thấy the specified kinds of changes.
 
   convert [SERVER] SCHEMA
     convert database on SERVER named in SCHEMA to SCHEMA.
 
   needs-conversion [SERVER] SCHEMA
-    tests whether SCHEMA's db on SERVER needs conversion.
+    kiểm tra xem db của SCHEMA trên SERVER có cần conversion hay không
 
   monitor [SERVER] [DATABASE] ALL
-    monitor all changes to all columns in all tables
+    giám sát tất cả các thay đổi đối với tất cả các cột trong tất cả các bảng
 
   wait [SERVER] DATABASE STATE
-    wait until DATABASE reaches STATE ("added" or "connected" or "removed")
-    in DATBASE on SERVER.
+    đợi đến khi DATABASE đạt đến STATE ("added" or "connected" or "removed") trong DATBASE trên SERVER.
 
   dump [SERVER] [DATABASE]
     dump contents of DATABASE on SERVER to stdout
@@ -62,16 +62,17 @@ Valid commands are:
     dump database contents in the form of a database file
 
   [--force] restore [SERVER] [DATABASE] < SNAPSHOT
-    restore database contents from a database file
+        khôi phục nội dung cơ sở dữ liệu từ một file cơ sở dữ liệu
+
 
   lock [SERVER] LOCK
-    create or wait for LOCK in SERVER
+    tạo hoặc chờ LOCK trong SERVER
 
   steal [SERVER] LOCK
-    steal LOCK from SERVER
+    lấy LOCK từ SERVER
 
   unlock [SERVER] LOCK
-    unlock LOCK from SERVER
+    unlock LOCK t SERVER
 
 The default SERVER is unix:/var/run/openvswitch/db.sock.
 The default DATABASE is Open_vSwitch.
@@ -91,7 +92,18 @@ PKI configuration (required to use SSL):
   --bootstrap-ca-cert=FILE  file with peer CA certificate to read or create
 SSL options:
   --ssl-protocols=PROTOS  list of SSL protocols to enable
-  --ssl-ciphers=CIPHERS   list of SSL ciphers to enable
+  --ssl-ciphers=CIPHERS   list of SSL ciphers to enableget-schema [SERVER] [DATABASE]
+   
+Output formatting options:
+  -f, --format=FORMAT         set output formatting to FORMAT
+                              ("table", "html", "csv", or "json")
+  -d, --data=FORMAT           set table cell output formatting to
+                              FORMAT ("string", "bare", or "json")
+  --no-headings               omit table heading row
+  --pretty                    pretty-print JSON in output
+  --bare                      equivalent to "--format=list --data=bare --no-headings"
+  --timestamp                 timestamp "monitor" output
+Daemon options:
 
 Output formatting options:
   -f, --format=FORMAT         set output formatting to FORMAT
