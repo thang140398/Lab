@@ -49,17 +49,17 @@ For OpenFlow switches:
   meter-stats SWITCH [METER]  hiện thống kê METER
   meter-features SWITCH       hiện thuộc tính meter
 For OpenFlow switches and controllers:
-  probe TARGET                probe whether TARGET is up
-  ping TARGET [N]             latency of N-byte echos
+  probe TARGET                thăm dò xem TARGET có up không 
+  ping TARGET [N]             ping xem độ trễ bằng N-byte 
   benchmark TARGET N COUNT    bandwidth of COUNT N-byte echos
-SWITCH or TARGET is an active OpenFlow connection method.
+*SWITCH or TARGET is an active OpenFlow connection method.*
 Other commands:
-  ofp-parse FILE              print messages read from FILE
+  ofp-parse FILE              hiện thông điệp đọc được từ FILE
   mod-temp-thresh SWITCH THRESHOLD  modify temperature threshold
   dump-temp-thresh SWITCH     print temperature threshold
-  ofp-parse-pcap PCAP         print OpenFlow read from PCAP
-  dump-tables-desc SWITCH     print tables description
-  bundle SWITCH MSG           send bundle messages
+  ofp-parse-pcap PCAP         hiện OpenFlow đọc từ PCAP
+  dump-tables-desc SWITCH     hiện mô tả bảng
+  bundle SWITCH MSG           gửi bundle messages
 Active OpenFlow connection methods:
   tcp:IP[:PORT]           PORT (default: 6633) at remote IP
   ssl:IP[:PORT]           SSL PORT (default: 6633) at remote IP
@@ -74,23 +74,21 @@ Daemon options:
   --pidfile[=FILE]        create pidfile (default: /ovs/var/run/openvswitch/ovs-ofctl.pid)
   --overwrite-pidfile     with --pidfile, start even if already running
 OpenFlow version options:
-  -V, --version           display version information
-  -O, --protocols         set allowed OpenFlow versions
-                          (default: OpenFlow10, OpenFlow11, OpenFlow12, OpenFlow13, OpenFlow14)
+  -V, --version           hiện thông tin phiên bản
+  -O, --protocols         cho phép phiên bản OpenFlow nào      (default: OpenFlow10, OpenFlow11, OpenFlow12, OpenFlow13, OpenFlow14)
 Logging options:
-  -vSPEC, --verbose=SPEC   set logging levels
-  -v, --verbose            set maximum verbosity level
-  --log-file[=FILE]        enable logging to specified FILE
-                           (default: /ovs/var/log/openvswitch/ovs-ofctl.log)
-  --syslog-target=HOST:PORT  also send syslog msgs to HOST:PORT via UDP
+  -vSPEC, --verbose=SPEC   đặt logging levels
+  -v, --verbose            đặt maximum verbosity level
+  --log-file[=FILE]        cho phép ghi log vào FILE        (default: /ovs/var/log/openvswitch/ovs-ofctl.log)
+  --syslog-target=HOST:PORT  đồng thời gửi syslog msgs tới HOST:PORT qua UDP
 Other options:
   --strict                    use strict match for flow commands
-  --readd                     replace flows that haven't changed
-  -F, --flow-format=FORMAT    force particular flow format
-  -P, --packet-in-format=FRMT force particular packet in format
-  -m, --more                  be more verbose printing OpenFlow
-  --timestamp                 (monitor, snoop) print timestamps
-  -t, --timeout=SECS          give up after SECS seconds
+  --readd                     thay thế các flow không thay đổi
+  -F, --flow-format=FORMAT    ép định dạng flow
+  -P, --packet-in-format=FRMT ép định dạng packet
+  -m, --more                  nhiều thông tin chi tiết hơn
+  --timestamp                 (monitor, snoop) hiện timestamps
+  -t, --timeout=SECS          loại bỏ sau SECS giây
   --sort[=field]               sắp xếp theo thứ tự tăng dần
   --rsort[=field]              sắp xếp theo thứ tự giảm dần
   --unixctl=SOCKET            đặt tên control socket
