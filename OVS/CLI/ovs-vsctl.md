@@ -146,9 +146,9 @@
   
 ### Output formatting options:
 
-  `-f, --format=FORMAT`         đặt định dạng output là FORMAT            ("table", "html", "csv", or "json")
+  `-f`, `--format=FORMAT`         đặt định dạng output là FORMAT            ("table", "html", "csv", or "json")
                               
- ` -d, --data=FORMAT`           đặt định dạng table cell output là     FORMAT ("string", "bare", or "json")
+ ` -d`, `--data=FORMAT`           đặt định dạng table cell output là     FORMAT ("string", "bare", or "json")
                               
   `--no-headings`               bỏ qua hàng tiêu đề bảng
   
@@ -160,9 +160,9 @@
   
 ### Logging options:
   
-  `-vSPEC, --verbose=SPEC`   đặt logging levels
+  `-vSPEC`, `--verbose=SPEC`   đặt logging levels
   
-  `-v, --verbose`            đặt mức độ chi tiết tối đa
+  `-v`, `--verbose`            đặt mức độ chi tiết tối đa
   
   `--log-file[=FILE]`        cho phép ghi log vào FILE               (mặc định: /ovs/var/log/openvswitch/ovs-vsctl.log)
   
@@ -188,12 +188,12 @@
   
 ### PKI configuration (required to use SSL):
 
- ` -p, --private-key=FILE`  file with private key
+ ` -p`, `--private-key=FILE`  file with private key
   
-  `-c, --certificate=FILE`  file with certificate for private key
+  `-c`, `--certificate=FILE`  file with certificate for private key
   
   
- ` -C, --ca-cert=FILE `     file with peer CA certificate
+ ` -C`, `--ca-cert=FILE `     file with peer CA certificate
   
 
 ### SSL options:
@@ -206,6 +206,6 @@
 
 ### Other options:
 
- ` -h, --help `                 hiển thị hướng dẫn
+ ` -h`, `--help `                 hiển thị hướng dẫn
   
- ` -V, --version `              hiển thị thông tin phiên bản
+ ` -V`, `--version `              hiển thị thông tin phiên bản
