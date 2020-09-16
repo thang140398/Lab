@@ -1,48 +1,53 @@
-ovs-ofctl: OpenFlow switch management utility
-usage: ovs-ofctl [OPTIONS] COMMAND [ARG...]
+# ovs-ofctl: quản lý OpenFlow switch 
+
+## cách sử dụng: 
+
+```ovs-ofctl [options] command [switch] [args...]```
+
+
 For OpenFlow switches:
-  show SWITCH                 show OpenFlow information
-  dump-desc SWITCH            print switch description
-  dump-tables SWITCH          print table stats
-  dump-table-features SWITCH  print table features
-  mod-port SWITCH IFACE ACT   modify port behavior
-  mod-table SWITCH MOD        modify flow table behavior
-  get-frags SWITCH            print fragment handling behavior
-  set-frags SWITCH FRAG_MODE  set fragment handling behavior
-  dump-ports SWITCH [PORT]    print port statistics
-  dump-ports-desc SWITCH [PORT]  print port descriptions
-  dump-flows SWITCH           print all flow entries
-  dump-flows SWITCH FLOW      print matching FLOWs
-  dump-aggregate SWITCH       print aggregate flow statistics
-  dump-aggregate SWITCH FLOW  print aggregate stats for FLOWs
+  show SWITCH                 hiện thông tin  OpenFlow của SWITCH (bridge hoặc socket)
+  dump-desc SWITCH            hiện description của SWITCH
+  dump-tables SWITCH          hiện số liệu trong bảng của SWITCH
+  dump-table-features SWITCH  hiện đặc tính của bảng của SWITCH
+  mod-port SWITCH IFACE ACT   sửa đổi behavior của port
+  mod-table SWITCH MOD        sửa đổi behavior của flow table 
+  get-frags SWITCH            hiện hành vi xử lý phân mảnh 
+  set-frags SWITCH FRAG_MODE  thiết lập hành vi xử lý phân mảnh
+  dump-ports SWITCH [PORT]    hiện thông tin PORT của SWITCH 
+  dump-ports-desc SWITCH [PORT]  hiện thông tin  PORT của SWITCH
+  dump-flows SWITCH           hiện tất cả flow entries của SWITCH
+  dump-flows SWITCH FLOW      hiện matching FLOWs của SWITCH
+  dump-aggregate SWITCH       hiện thống kê aggregate flow của SWITCH
+  dump-aggregate SWITCH FLOW  hiện aggregate stats for FLOWs
   queue-stats SWITCH [PORT [QUEUE]]  dump queue stats
-  add-flow SWITCH FLOW        add flow described by FLOW
-  add-flows SWITCH FILE       add flows from FILE
-  mod-flows SWITCH FLOW       modify actions of matching FLOWs
-  del-flows SWITCH [FLOW]     delete matching FLOWs
-  replace-flows SWITCH FILE   replace flows with those in FILE
-  diff-flows SOURCE1 SOURCE2  compare flows from two sources
+  add-flow SWITCH FLOW        thêm flow được mô tả bởi FLOW vào SWITCH
+  add-flows SWITCH FILE       thêm flows từ FILE vào SWITCH
+  mod-flows SWITCH FLOW       sửa đổi hành động matching flow 
+  del-flows SWITCH [FLOW]     xóa matching FLOWs
+  replace-flows SWITCH FILE   thay thế flow bằng các flow trong FILE
+  diff-flows SOURCE1 SOURCE2  so sánh flow từ hai nguồn SOURCE1 và SOURCE2
   packet-out SWITCH IN_PORT ACTIONS PACKET...
-                              execute ACTIONS on PACKET
+                              thực thi ACTIONS trên PACKET
   monitor SWITCH [MISSLEN] [invalid_ttl] [watch:[...]]
-                              print packets received from SWITCH
+                              hiện packets đã nhận từ SWITCH
   snoop SWITCH                snoop on SWITCH and its controller
-  add-group SWITCH GROUP      add group described by GROUP
-  add-groups SWITCH FILE       add group from FILE
-  mod-group SWITCH GROUP      modify specific group
-  del-groups SWITCH [GROUP]   delete matching GROUPs
-  dump-group-features SWITCH  print group features
-  dump-groups SWITCH [GROUP]  print group description
-  dump-group-stats SWITCH [GROUP]  print group statistics
-  queue-get-config SWITCH PORT  print queue information for port
-  add-meter SWITCH METER      add meter described by METER
-  mod-meter SWITCH METER      modify specific METER
-  del-meter SWITCH METER      delete METER
-  del-meters SWITCH           delete all meters
-  dump-meter SWITCH METER     print METER configuration
-  dump-meters SWITCH          print all meter configuration
-  meter-stats SWITCH [METER]  print meter statistics
-  meter-features SWITCH       print meter features
+  add-group SWITCH GROUP      thêm group được mô tả bởi GROUP vào SWITCH
+  add-groups SWITCH FILE      thêm group từ FILE
+  mod-group SWITCH GROUP      sửa đổi group tên GROUP của SWITCH
+  del-groups SWITCH [GROUP]   xóa GROUP
+  dump-group-features SWITCH  hiện thuộc tính các group trên SWITCH
+  dump-groups SWITCH [GROUP]  hiện mô tả các group trên SWITCH
+  dump-group-stats SWITCH [GROUP]  hiện số liệu thống kê của GROUP
+  queue-get-config SWITCH PORT  hiện thông tin hàng đợi của port
+  add-meter SWITCH METER      thêm meter mô tả bởi METER vào SWITCH
+  mod-meter SWITCH METER      sửa đổi METER
+  del-meter SWITCH METER      xóa METER
+  del-meters SWITCH           xóa tất cả meter của SWITCH
+  dump-meter SWITCH METER     hiện cấu hình METER 
+  dump-meters SWITCH          hiện cấu hình tất cả metet
+  meter-stats SWITCH [METER]  hiện thống kê METER
+  meter-features SWITCH       hiện thuộc tính meter
 For OpenFlow switches and controllers:
   probe TARGET                probe whether TARGET is up
   ping TARGET [N]             latency of N-byte echos
@@ -86,8 +91,8 @@ Other options:
   -m, --more                  be more verbose printing OpenFlow
   --timestamp                 (monitor, snoop) print timestamps
   -t, --timeout=SECS          give up after SECS seconds
-  --sort[=field]              sort in ascending order
-  --rsort[=field]             sort in descending order
-  --unixctl=SOCKET            set control socket name
-  -h, --help                  display this help message
-  -V, --version               display version information
+  --sort[=field]               sắp xếp theo thứ tự tăng dần
+  --rsort[=field]              sắp xếp theo thứ tự giảm dần
+  --unixctl=SOCKET            đặt tên control socket
+  -h, --help                  hiện thông tin hỗ trợ
+  -V, --version               hiện thông tin phiên bản
