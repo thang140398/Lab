@@ -9,17 +9,17 @@
 
 ### Open vSwitch commands:
 
-  init                        khởi tạo database
+  `init`                 -       khởi tạo database
   
-  show                        hiển thị tổng quan database content 
+  `show `              -       hiển thị tổng quan database content 
   
-  emer-reset                  reset cấu hình về clean state
+  `mer-reset `         -        reset cấu hình về clean state
 
 ### Bridge commands:
   
-  add-br BRIDGE               tạo bridge mới có tên BRIDGE
+ `add-br BRIDGE `        -     tạo bridge mới có tên BRIDGE
   
-  add-br BRIDGE PARENT VLAN   tạo mới fake BRIDGE in PARENT on VLAN
+  `add-br BRIDGE PARENT VLAN`  - tạo mới fake BRIDGE in PARENT on VLAN
   
   del-br BRIDGE               xóa bridge tên BRIDGE và tất cả những port của nó
   
