@@ -56,14 +56,14 @@ Giao thức định tuyến được dùng trong khi thi hành thuật toán đ�
 
 *Hai giao thức sau đây thuộc sở hữu của Cisco, và được hỗ trợ bởi các router Cisco hay những router của những nhà cung cấp mà Cisco đã đăng ký công nghệ:*
 
--Interior Gateway Routing Protocol (IGRP)
+- Interior Gateway Routing Protocol (IGRP)
 
--Enhanced IGRP (EIGRP)
+- Enhanced IGRP (EIGRP)
 
 2. Giao thức định tuyến ngoài
 
--Exterior Gateway Protocol (EGP)
+- Exterior Gateway Protocol (EGP)
 
--Border Gateway Protocol (BGP)
+- Border Gateway Protocol (BGP)
 
--Constrained Shortest Path First (CSPF)
+- Constrained Shortest Path First (CSPF)
