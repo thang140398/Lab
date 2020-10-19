@@ -17,7 +17,7 @@ Khi một trong các node gặp vấn đề, những node khác có sử dụng 
 **Thuật toán trạng thái kết nối**
 (Link-state routing protocols)
 
-Khi áp dụng các thuật toán trạng thái kết nối, mỗi node sử dụng dữ liệu cơ sở của nó như là một bản đồ của mạng với dạng một đồ thị. Để làm điều này, mỗi node phát đi tới tổng thể mạng những thông tin về các node khác mà nó có thể kết nối được, và từng node góp thông tin một cách độc lập vào bản đồ. Sử dụng bản đồ này, mỗi router sau đó sẽ quyết định về tuyến đường tốt nhất từ nó đến mọi node khác.
+Mỗi node sử dụng dữ liệu cơ sở của nó như là một bản đồ của mạng với dạng một đồ thị. Để làm điều này, mỗi node phát đi tới tổng thể mạng những thông tin về các node khác mà nó có thể kết nối được, và từng node góp thông tin một cách độc lập vào bản đồ. Sử dụng bản đồ này, mỗi router sau đó sẽ quyết định về tuyến đường tốt nhất từ nó đến mọi node khác.
 
 Thuật toán đã làm theo cách này là Dijkstra, bằng cách xây dựng cấu trúc dữ liệu khác, dạng cây, trong đó node hiện tại là gốc, và chứa mọi noded khác trong mạng. Bắt đầu với một cây ban đầu chỉ chứa chính nó. Sau đó lần lượt từ tập các node chưa được thêm vào cây, nó sẽ thêm node có chi phí thấp nhất để đến một node đã có trên cây. Tiếp tục quá trình đến khi mọi node đều được thêm.
 
@@ -25,9 +25,21 @@ Cây này sau đó phục vụ để xây dựng bảng định tuyến, đưa r
 
 **So sánh**
 
-Các giao thức định tuyến với thuật toán vector tỏ ra đơn giản và hiệu quả trong các mạng nhỏ, và đòi hỏi ít (nếu có) sự giám sát. Tuy nhiên, chúng không làm việc tốt, và có tài nguyên tập hợp ít ỏi, dẫn đến sự phát triển của các thuật toán trạng thái kết nối tuy phức tạp hơn nhưng tốt hơn để dùng trong các mạng lớn. Giao thức vector kém hơn với rắc rối về đếm đến vô tận.
+Thuật toán vector
 
-Ưu điểm chính của định tuyến bằng trạng thái kết nối là phản ứng nhanh nhạy hơn, và trong một khoảng thời gian có hạn, đối với sự thay đổi kết nối. Ngoài ra, những gói được gửi qua mạng trong định tuyến bằng trạng thái kết nối thì nhỏ hơn những gói dùng trong định tuyến bằng vector. Định tuyến bằng vector đòi hỏi bảng định tuyến đầy đủ phải được truyền đi, trong khi định tuyến bằng trạng thái kết nối thì chỉ có thông tin về "hàng xóm" của node được truyền đi. Vì vậy, các gói này dùng tài nguyên mạng ở mức không đáng kể. Khuyết điểm chính của định tuyến bằng trạng thái kết nối là nó đòi hỏi nhiều sự lưu trữ và tính toán để chạy hơn định tuyến bằng vector.
+- Đơn giản và hiệu quả trong các mạng nhỏ, và đòi hỏi ít (nếu có) sự giám sát
+
+- Không làm việc tốt, và có tài nguyên tập hợp ít ỏi, dẫn đến sự phát triển của các thuật toán trạng thái kết nối tuy phức tạp hơn nhưng tốt hơn để dùng trong các mạng lớn
+
+Trạng thái kết nối
+
+- phản ứng nhanh nhạy hơn, và trong một khoảng thời gian có hạn, đối với sự thay đổi kết nối
+
+- Những gói được gửi qua mạng trong định tuyến bằng trạng thái kết nối thì nhỏ hơn những gói dùng trong định tuyến bằng vector
+
+- Định tuyến bằng vector đòi hỏi bảng định tuyến đầy đủ phải được truyền đi, trong khi định tuyến bằng trạng thái kết nối thì chỉ có thông tin về "hàng xóm" của node được truyền đi. Vì vậy, các gói này dùng tài nguyên mạng ở mức không đáng kể. 
+
+- Đòi hỏi nhiều sự lưu trữ và tính toán để chạy hơn định tuyến bằng vector.
 
 Giao thức được định tuyến và giao thức định tuyến
 --------------------------------------
