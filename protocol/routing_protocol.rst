@@ -25,7 +25,7 @@ RIPv1 yêu cầu tất cả các thiết bị trên mạng sử dụng cùng sub
 
 **RIPv2**
 
-RIPv2 cung cấp định tuyến cố định, truyền thông tin cố định và truyền thông tin subnet mask trong các cập nhật định tuyến. Điều này cũng được gọi là Classless Routing. Với các giao thức định tuyến Classless, các mạng con khác nhau trong cùng một mạng có thể có các subnet mask khác nhau, điều này được gọi là thao tác subnet mask có chiều dài thay đổi VLSM (Variable-Length Subnet Masking).
+RIPv2 cung cấp định tuyến cố định, truyền thông tin cố định và truyền thông tin subnet mask trong các cập nhật định tuyến. Điều này được gọi là Classless Routing. Với các giao thức định tuyến Classless, các mạng con khác nhau trong cùng một mạng có thể có các subnet mask khác nhau, điều này được gọi là thao tác subnet mask có chiều dài thay đổi VLSM (Variable-Length Subnet Masking).
 
 Với phiên bản RIPv2 thì RIP đã trở thành giao thức định tuyến không theo lớp địa chỉ.
 
