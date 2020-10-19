@@ -33,5 +33,28 @@ RIPv2 có hỗ trợ việc xác minh thông tin định tuyến. Chúng ta có 
 
 **So sánh**
 
+RIPv1
 
+- Định tuyến theo lớp địa chỉ
+
+- Không gửi thông tin về subnet-mask trong thông tin định tuyến
+
+- Không hỗ trợ VLSM, vì vậy tất cả các mạng trong hệ thống RIPv1 phải cùng subnet-mask
+
+- Không có cơ chế xác minh thông tin định tuyến
+
+- Gửi quảng bá theo địa chỉ 255.255.255.255
+
+RIPv2
+
+- Định tuyến không theo lớp địa chỉ
+
+- Có gửi thông tin vế subnet-mask trong thông tin định tuyến
+
+- Có hỗ trợ VLSM, nên các mạng trong hệ thống RIPv2 có thể có chiều dài subnet-mask khác nhau
+
+- Có cơ chế xác minh thông tin định tuyến
+
+- Gửi quảng bá theo địa chỉ 224.0.0.9 nên hiệu quả h
+RIPv2
 
