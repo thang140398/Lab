@@ -203,51 +203,86 @@ netdev provider triển khai OS- and hardware-specific interface to “network d
 - - dpdk_vhost_client_class
 
 1.3. Call Flows
+------------
 
 
-Bắt đầu, khởi tạo bridge module, lấy một số tham số cấu hình từ ovsdb
-Sau đó, ovs-vswitchd đi vào main loop. vòng lặp đầu tiên khởi tạo một số library, bao gồm DPDK và quan trọng nhất là ofproto
-Tiếp theo, mỗi datapath sẽ thực hiện công việc của mình bằng cách chạy ofproto_type_run (), nó sẽ gọi vào việc triển khai type_run () cụ thể của kiểu datapath đó
-Mỗi bridge sẽ thực hiện công việc của mình bằng cách chạy ofproto_run (), nó sẽ gọi vào việc triển khai run () cụ thể của ofproto class
-ovs-vswitchd sẽ xử lý các thông báo IPC (JSON-RPC), đến từ dòng lệnh (ovs-appctl) và ovsdb-server
-netdev_run () được gọi để xử lý tất cả các loại netdev khác nhau
-Sau khi tất cả các công việc trên được thực hiện, bridge module,  unixctl server, và netdev modules sẽ chuyển sang trạng thái chặn cho đến khi các tín hiệu mới kích hoạt
+- Bắt đầu, khởi tạo bridge module, lấy một số tham số cấu hình từ ovsdb
+
+- Sau đó, ovs-vswitchd đi vào main loop. vòng lặp đầu tiên khởi tạo một số library, bao gồm DPDK và quan trọng nhất là ofproto
+
+- Tiếp theo, mỗi datapath sẽ thực hiện công việc của mình bằng cách chạy ofproto_type_run (), nó sẽ gọi vào việc triển khai type_run () cụ thể của kiểu datapath đó
+
+- Mỗi bridge sẽ thực hiện công việc của mình bằng cách chạy ofproto_run (), nó sẽ gọi vào việc triển khai run () cụ thể của ofproto class
+
+- ovs-vswitchd sẽ xử lý các thông báo IPC (JSON-RPC), đến từ dòng lệnh (ovs-appctl) và ovsdb-server
+
+- netdev_run () được gọi để xử lý tất cả các loại netdev khác nhau
+
+- Sau khi tất cả các công việc trên được thực hiện, bridge module,  unixctl server, và netdev modules sẽ chuyển sang trạng thái chặn cho đến khi các tín hiệu mới kích hoạt
 
 
 2. OVSDB
+------------
+
 2.1. OVSDB Overview
+------------
+
 ovsdb-server cung cấp RPC interfaces cho một hoặc nhiều Open vSwitch databases (OVSDBs). Nó hỗ trợ JSON-RPC client connections qua TCP/IP hoặc Unix domain sockets (active hoặc passive). Mỗi file OVSDB có thể được chỉ định trên dòng lệnh làm cơ sở dữ liệu. Nếu không có gì được chỉ định, mặc định là /etc/openvswitch/conf.db.
 
 OVSDB nắm giữ các cấu hình switch-level:
-thông tin các bridges, interfaces, tunnel
-địa chỉ của OVSDB và OpenFlow controller 
+
+- thông tin các bridges, interfaces, tunnel
+
+- địa chỉ của OVSDB và OpenFlow controller 
+
 Cấu hình được lưu trữ trên đĩa và vẫn tồn tại khi khởi động lại.
 
 Các thuộc tính Custome database:
-value constraints
-weak references
-garbage collection
+
+- value constraints
+
+- weak references
+
+- garbage collection
 
 CLI:
-ovs-vsctl: sửa đổi DB bằng cách định cấu hình ovs-vswitchd
-ovsdb-tool: Quản lý DB, ví dụ: tạo / nén / chuyển đổi DB, hiển thị nhật ký DB
+
+- ovs-vsctl: sửa đổi DB bằng cách định cấu hình ovs-vswitchd
+
+- ovsdb-tool: Quản lý DB, ví dụ: tạo / nén / chuyển đổi DB, hiển thị nhật ký DB
+
 2.2. Key Data Structures
-ovsdb_schema
-ovsdb
-ovsdb_server
-ovsdb_table_schema
-ovsdb_table
+------------
+
+- ovsdb_schema
+
+- ovsdb
+
+- ovsdb_server
+
+- ovsdb_table_schema
+
+- ovsdb_table
+
 2.2.1. OVSDB
+---------
+
 2.2.2. OVSDB Table
+-------------
+
 ovsdb core tables:
 
 Open_vSwitch là root table và luôn luôn chỉ có một dòng duy nhất
+
 2.2.3. Flow Diagram
-
-
+--------------
 
 3. kernel module (datapath)
+-------------
+
 3.1. Overview
+------------------
+
 
 
 Datapath là forwarding plane của OVS. Ban đầu nó được triển khai như kernel module. Ngoài datapath được triển khai ở kernel space thì các thành phần khác được triển khai ở user space và có ít phụ thuộc vào nền tảng hệ thống. Điều đó có nghĩa là việc chuyển OVS sang các OS hay platform khác là rất đơn giản (về mặt lý thuyết): chỉ cần triển khai lại phần kernel trên OS hay platform mới
@@ -255,32 +290,51 @@ Datapath là forwarding plane của OVS. Ban đầu nó được triển khai nh
 Thực tế các phiên bản gần đây OVS đã có 2 loại datapath để có thể chọn: kernel datapath và userspace datapath.
 
 Open vSwitch hỗ trợ các datapath khác nhau trên các platform khác nhau:
-Linux upstream
-datapath được triển khai bởi kernel module được vận chuyển với Linux upstream. Các tính năng dần được đưa vào kernel
-Linux OVS tree
-datapath được triển khai bởi kernel module được phân phối với OVS source tree 
-Userspace
-Còn được gọi là DPDK, dpif-netdev hoặc dummy datapath. Đây là đường dẫn dữ liệu duy nhất hoạt động trên NetBSD và FreeBSD.
-Hyper-V
-Còn được gọi là Windows datapath    
-3.1.1. Kernel datapath
-Trên linux, kernel datapath là loại datapath mặc định
-Ví dụ lệnh tạo OVS bridge:
-$ ovs-vsctl add-br br0
 
-$ ovs-vsctl show
-05daf6f1-da58-4e01-8530-f6ec0d51b4e1
-    Bridge br0
-        Port br0
-            Interface br0
-                type: internal
+- Linux upstream:
+datapath được triển khai bởi kernel module được vận chuyển với Linux upstream. Các tính năng dần được đưa vào kernel
+
+- Linux OVS tree:
+datapath được triển khai bởi kernel module được phân phối với OVS source tree 
+
+- Userspace:
+Còn được gọi là DPDK, dpif-netdev hoặc dummy datapath. Đây là đường dẫn dữ liệu duy nhất hoạt động trên NetBSD và FreeBSD.
+
+- Hyper-V:
+Còn được gọi là Windows datapath    
+
+3.1.1. Kernel datapath
+------------
+
+Trên linux, kernel datapath là loại datapath mặc định
+
+Ví dụ lệnh tạo OVS bridge:
+
+::
+
+  $ ovs-vsctl add-br br0
+
+  $ ovs-vsctl show
+  05daf6f1-da58-4e01-8530-f6ec0d51b4e1
+      Bridge br0
+          Port br0
+              Interface br0
+                  type: internal
+                  
 3.1.2. Userspace Datapath
+-------------------
+
 Userspace datapath khác với datapath truyền thống ở chỗ việc chuyển tiếp và xử lý gói tin của nó được thực hiện trong userspace. Trong số đó, netdev-dpdk là một trong những cách triển khai, được hỗ trợ kể từ OVS 2.4.
 
 Lệnh để tạo OVS bridge sử dụng userspace datapath:
-$ ovs-vsctl add-br br0 -- set Bridge br0 datapath_type=netdev
+
+::
+
+  $ ovs-vsctl add-br br0 -- set Bridge br0 datapath_type=netdev
+  
 Lưu ý chỉ định rõ datapath_type là netdev khi tạo bridge, nếu không sẽ gặp lỗi ovs-vsctl: Error detected while setting up ‘br0’.    
-Official Doc
+
+**Official Doc**
 
 Open vSwitch kernel module cho phép kiểm soát userspace linh hoạt đối với flow-level packet processing trên các thiết bị mạng được chọn. Nó có thể được sử dụng để triển khai Ethernet switch, network device bonding, VLAN processing, network access control, flow-based network control, v.v.
 
@@ -289,28 +343,48 @@ Kernel module triển khai nhiều datapath (tương tự như bridge), mỗi ch
 Khi một gói tin đến vport, kernel module sẽ xử lý nó bằng cách trích xuất flow key của nó và tra cứu nó trong flow table. Nếu có một luồng phù hợp, nó sẽ thực hiện các hành động liên quan. Nếu không trùng khớp, nó sẽ xếp hàng đợi gói đến userspace để xử lý (như một phần của quá trình xử lý, userspace có thể sẽ thiết lập một luồng để xử lý thêm các gói cùng loại hoàn toàn trong kernel).
 
 3.2. Key Data Structures
-datapath - flow-based packet forwarding/swithcing module
-flow
-flow_table
-sw_flow_key
-vport
+--------------
+
+- datapath - flow-based packet forwarding/swithcing module
+
+- flow
+
+- flow_table
+
+- sw_flow_key
+
+- vport
+
 3.3. vport
+------
+
 Các kiểu:
-netdev
+
+- netdev
+
 .send = dev_queue_xmit
+
 dev_queue_xmit(skb) cuối cùng sẽ truyền gói tin trên thiết bị mạng vật lý
-internal
+
+- internal
+
 .send = internal_dev_recv
+
 send method sẽ gọi netif_rx(skb) chèn skb vào TCP/IP stack, và gói cuối cùng sẽ được truyền theo ngăn xếp
-patch
+
+- patch
+
 .send = patch_send()
+
 ssend method sẽ chỉ chuyển skb pointer đến vport ngang hàng
-tunnel vports: vxlan, gre, ...
+
+- tunnel vports: vxlan, gre, ...
+
 tunnel xmit method in kernel, e.g. .send = vxlan_xmit for vxlan
 
 
 
-Tham khảo:
+*Tham khảo:*
 http://arthurchiao.art/blog/ovs-deep-dive-0-overview/
 
 
