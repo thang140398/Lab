@@ -44,53 +44,87 @@ ovs-vswitchd nằm ở vị trí quan trọng của OVS, cần tương tác vớ
 
 - ovs-vswitchd giao tiếp với:
 
- - outside world sử dụng OpenFlow
+- - outside world sử dụng OpenFlow
 
- - ovsdb-server sử dụng giao thức OVSDB protocol
+- - ovsdb-server sử dụng giao thức OVSDB protocol
 
-kernel thông qua netlink (tương tự như Unix socket domain)
+- - kernel thông qua netlink (tương tự như Unix socket domain)
 
-system thông qua abstract interface là netdev
-Triển khai mirroring, bonding, và VLANs
-Công cụ CLI: ovs-ofctl, ovs-appctl
+- - system thông qua abstract interface là netdev
+
+- Triển khai mirroring, bonding, và VLANs
+
+- Công cụ CLI: ovs-ofctl, ovs-appctl
 
 vswitch module được chia thành nhiều submodules/libraies:
 
                        +------------------------+
+                       
                        |   ovs-vswitchd       |<-->ovsdb-server
+                       
                        +------------------------+
+                       
                        |            ofproto        |<-->OpenFlow controllers
+                       
                        +---------+-+-----------+
+                       
                        | netdev |  | ofproto  |
+                       
                        +---------+  | provider|
+                       
                        | netdev |  +----------+
+                       
                        |provider|
+                       
                        +---------+
 
-ovs-vswitchd: vswitchd daemon
-ofproto: library định nghĩa (abstracts) ovs bridge
-ofproto-provider: interface điều khiển loại OpenFlow switch cụ thể
-netdev: library định nghĩa (abstracts) network devices
-netdev-provider:  OS- and hardware-specific interface to network devices
+
+- ovs-vswitchd: vswitchd daemon
+
+- ofproto: library định nghĩa (abstracts) ovs bridge
+
+- ofproto-provider: interface điều khiển loại OpenFlow switch cụ thể
+
+- netdev: library định nghĩa (abstracts) network devices
+
+- netdev-provider:  OS- and hardware-specific interface to network devices
+
 1.2.  Key Data Structures
+--------------------
 
 
 
-OVS bridges quản lý hai loại tài nguyên:
-forwarding plane mà nó điều khiển (datapath)
-(physical and virtual) network devices được gắn vào nó (netdev)
-Các cấu trúc dữ liệu chính:
-Triển khai OVS bridge     :ofproto, ofproto-provider
-để quản lý đường datapath : dpif, dpif-provider
-để quản lý network device : netdev, netdev-provider
+- OVS bridges quản lý hai loại tài nguyên:
+
+- - forwarding plane mà nó điều khiển (datapath)
+
+- - (physical and virtual) network devices được gắn vào nó (netdev)
+
+- Các cấu trúc dữ liệu chính:
+
+- - Triển khai OVS bridge     :ofproto, ofproto-provider
+
+- - để quản lý đường datapath : dpif, dpif-provider
+
+- - để quản lý network device : netdev, netdev-provider
+
 1.2.1. ofproto
-struct ofproto abstracts OpenFlow switches. Một ofproto instance là một OpenFlow switch (bridge).
-Data Structures (ofproto/ofproto-provider.h):
-struct ofproto: thể hiện một OpenFlow switch (ovs bridge), tất cả flow/port được thực hiện trên ofproto
-struct ofport: thể hiện một port trong một ofproto
-struct rule: thể hiện một OpenFlow flow trong một ofproto
-struct ofgroup: thể hiện OpenFlow 1.1+ group trong một ofproto
+------------
+
+- struct ofproto abstracts OpenFlow switches. Một ofproto instance là một OpenFlow switch (bridge).
+
+- Data Structures (ofproto/ofproto-provider.h):
+
+- - struct ofproto: thể hiện một OpenFlow switch (ovs bridge), tất cả flow/port được thực hiện trên ofproto
+
+- - struct ofport: thể hiện một port trong một ofproto
+
+- - struct rule: thể hiện một OpenFlow flow trong một ofproto
+
+- - struct ofgroup: thể hiện OpenFlow 1.1+ group trong một ofproto
+
 1.2.2. ofproto-provider
+----------------
 
 
 ofproto class structure, được xác định bởi mỗi một triển khai của ofproto (ovs bridge).
@@ -101,40 +135,73 @@ Open vSwitch có built-in ofproto provider tên là ofproto-dpif, được xây 
 
 
 1.2.3. netdev
-Open vSwitch library, định nghĩa trong lib/netdev-provider.h, triển khai trong lib/netdev.c, xác định cách tương tác với các network devices, nghĩa là Ethernet interfaces.
-Mỗi porttrên switch phải có một netdev tương ứng
+-----------
+
+- Open vSwitch library, định nghĩa trong lib/netdev-provider.h, triển khai trong lib/netdev.c, xác định cách tương tác với các network devices, nghĩa là Ethernet interfaces.
+
+- Mỗi porttrên switch phải có một netdev tương ứng
+
 1.2.4. netdev-provider
+-------------
 
 netdev provider triển khai OS- and hardware-specific interface to “network devices”, và ethernet device. Open vSwitch cần phải có khả năng mở mỗi port trên switch dưới dạng netdev, vì thế cần triển khai “netdev provider” hoạt động với hardware và software của switch.
 
-Tất cả các loại class của netdev:
-linux netdev (lib/netdev-linux.c, for linux platform)
-system - netdev_linux_class
-tap - netdev_tap_class
-internal - netdev_internal_class
-bsd netdev (lib/netdev-bsd.c, for bsd platform)
-system - netdev_bsd_class
-tap - netdev_tap_class
-windows netdev (for windows platform)
-system - netdev_windows_class
-internal - netdev_internal_class
-dummy netdev (lib/netdev-dummy.c)
-dummy - dummy_class
-dummy-internal - dummy_internal_class
-dummy-pmd - dummy_pmd_class
-vport netdev (lib/netdev-vport.c, a vport holds a reference to a port in datapath, the latter could be opened with netdev_open())
-tunnel class:
-geneve
-gre
-vxlan
-lisp
-stt
-patch - patch_class
-dpdk netdev
-dpdk_class
-dpdk_ring_class
-dpdk_vhost_class
-dpdk_vhost_client_class
+**Tất cả các loại class của netdev:**
+
+- linux netdev (lib/netdev-linux.c, for linux platform)
+
+- - system - netdev_linux_class
+
+- - tap - netdev_tap_class
+
+- - internal - netdev_internal_class
+
+- bsd netdev (lib/netdev-bsd.c, for bsd platform)
+
+- - system - netdev_bsd_class
+
+- - tap - netdev_tap_class
+
+- windows netdev (for windows platform)
+
+- - system - netdev_windows_class
+
+- - internal - netdev_internal_class
+
+- dummy netdev (lib/netdev-dummy.c)
+
+- - dummy - dummy_class
+
+- - dummy-internal - dummy_internal_class
+
+- - dummy-pmd - dummy_pmd_class
+
+- vport netdev (lib/netdev-vport.c, a vport holds a reference to a port in datapath, the latter could be opened with netdev_open())
+
+- - tunnel class:
+
+- - - geneve
+
+- - - gre
+
+- - - vxlan
+
+- - - lisp
+
+- - - stt
+
+- - patch - patch_class
+
+- dpdk netdev
+
+- - dpdk_class
+
+- - dpdk_ring_class
+
+- - dpdk_vhost_class
+
+- - dpdk_vhost_client_class
+
 1.3. Call Flows
 
 
