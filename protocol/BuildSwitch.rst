@@ -52,12 +52,8 @@ switch 24 port
     # table 0
     ovs-ofctl add-flow $bridge_name "table=0, priority=0, actions=resubmit(,3)"
 
-::
-
     # table 3 - static forwarding and filter
     ovs-ofctl add-flow $bridge_name "table=3, priority=0, actions=resubmit(,5)"
-
-::
 
     # table 5 - VLAN
     ovs-ofctl add-flows $bridge_name - <<'EOF'
@@ -133,16 +129,23 @@ switch 24 port
     ovs-ofctl add-flow $bridge_name "table=30 priority=50 reg0=24 actions=24"
     ovs-ofctl add-flow $bridge_name "table=30, priority=0, actions=drop"
 
-Trong đó
-Table 0 là nơi gói tin đi qua đầu tiên
-Table 3 định tuyến tĩnh theo ip hoặc lọc 
-Table 5 thêm vlan_id theo port, ở đây coi các in_port 1->5 thuộc vlan1, 6->10 thuộc vlan2, 11->15 thuộc vlan3, 16->20 thuộc vlan4. 21->dùng làm port trunk hoặc nối với router
-Table 10 học địa chỉ MAC và VLAN từ các flow và lưu vào table 25
-Table 15 định tuyến tĩnh (chưa dùng đến)
-Table 20 có nhiệm vụ matching flow bằng table 25 dựa trên địa chỉ MAC đích và VLAN, sau đó chuyển tiếp sang table 30
-Table 30 chính thức forward gói tin. Đối với output ra các access port, ta thực hiện loại bỏ VLAN header trước đi đẩy gói tin ra. Còn trunk port thì vẫn giữ VLAN header
+**Trong đó**
+
+- Table 0 là nơi gói tin đi qua đầu tiên
+
+- Table 3 định tuyến tĩnh theo ip hoặc lọc 
+
+- Table 5 thêm vlan_id theo port, ở đây coi các in_port 1->5 thuộc vlan1, 6->10 thuộc vlan2, 11->15 thuộc vlan3, 16->20 thuộc vlan4. 21->dùng làm port trunk hoặc nối với router
+
+- Table 10 học địa chỉ MAC và VLAN từ các flow và lưu vào table 25
+
+- Table 15 định tuyến tĩnh (chưa dùng đến)
+
+- Table 20 có nhiệm vụ matching flow bằng table 25 dựa trên địa chỉ MAC đích và VLAN, sau đó chuyển tiếp sang table 30
+
+- Table 30 chính thức forward gói tin. Đối với output ra các access port, ta thực hiện loại bỏ VLAN header trước đi đẩy gói tin ra. Còn trunk port thì vẫn giữ VLAN header
 
 
-Tạo tương tự các switch khác chỉ cần đổi switch_name.
+*Tạo tương tự các switch khác chỉ cần đổi switch_name.*
 
 
