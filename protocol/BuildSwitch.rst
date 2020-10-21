@@ -3,6 +3,7 @@ Open vSwitch
 switch 24 port
 ================
 
+
 Tài liệu này hướng dẫn tạo một switch 24 port có các chứa năng cơ bản của switch layer 2 và định tuyến tĩnh dựa vào địa chỉ ip
 
 Tạo switch có tên switch1
