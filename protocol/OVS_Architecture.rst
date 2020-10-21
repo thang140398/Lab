@@ -1,4 +1,5 @@
 OVS Architecture
+================
 
 
 
@@ -8,15 +9,23 @@ OVS thường được sử dụng để kết nối nhiều VM/container trong 
 
 Hình trên, OVS bao gồm ba thành phần:
 
-vswitchd
-user space program, ovs deamon
-tools: ovs-appctl
-ovsdb-server
-user space program, database server of OVS
-tools: ovs-vsctl, ovs-ofctl
-kernel module (datapath)
-kernel space module, OVS packet forwarder
-tools: ovs-dpctl
+**vswitchd**
+
+- user space program, ovs deamon
+
+- tools: ovs-appctl
+
+**ovsdb-server**
+
+- user space program, database server of OVS
+
+- tools: ovs-vsctl, ovs-ofctl
+
+**kernel module (datapath)**
+
+- kernel space module, OVS packet forwarder
+
+- tools: ovs-dpctl
 
 vswitchd là main deamon process của OVS, ovsdb-server là database server của OVS và datapath là một kernel module thực hiện chuyển tiếp gói platform-dependent. Sau khi OVS khởi động, chúng ta có thể thấy hai dịch vụ: ovs-vswitchd và ovsdb-server:
 
@@ -26,13 +35,21 @@ Một hình minh họa khác chi tiết hơn:
 
 
 1. vswitchd
+------------
+
 1.1. vswitchd Overview
+--------------
+
 ovs-vswitchd nằm ở vị trí quan trọng của OVS, cần tương tác với OpenFlow controller, OVSDB, và kernel module.
 
-ovs-vswitchd giao tiếp với:
-outside world sử dụng OpenFlow
-ovsdb-server sử dụng giao thức OVSDB protocol
+- ovs-vswitchd giao tiếp với:
+
+- - outside world sử dụng OpenFlow
+
+- - ovsdb-server sử dụng giao thức OVSDB protocol
+
 kernel thông qua netlink (tương tự như Unix socket domain)
+
 system thông qua abstract interface là netdev
 Triển khai mirroring, bonding, và VLANs
 Công cụ CLI: ovs-ofctl, ovs-appctl
