@@ -44,9 +44,9 @@ ovs-vswitchd nằm ở vị trí quan trọng của OVS, cần tương tác vớ
 
 - ovs-vswitchd giao tiếp với:
 
-- - outside world sử dụng OpenFlow
+ - outside world sử dụng OpenFlow
 
-- - ovsdb-server sử dụng giao thức OVSDB protocol
+ - ovsdb-server sử dụng giao thức OVSDB protocol
 
 kernel thông qua netlink (tương tự như Unix socket domain)
 
