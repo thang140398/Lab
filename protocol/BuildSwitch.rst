@@ -6,7 +6,12 @@ switch 24 port
 ================
 
 
-*Tài liệu này hướng dẫn tạo một switch 24 port có các chứa năng cơ bản của switch layer 2 và định tuyến tĩnh dựa vào địa chỉ ip*
+*Mục tiêu*
+
+- Tạo một switch 24 port có các chức năng cơ bản của switch layer 2 và chứa năng định tuyến tĩnh dựa vào địa chỉ ip của layer 3
+
+- Các port 1 - 20 làm access port cho các VLAN, port 21 - 24 làm trunk port
+
 
 **Tạo switch có tên switch1**
 
@@ -135,7 +140,7 @@ switch 24 port
 
 - Table 3 định tuyến tĩnh theo ip hoặc lọc 
 
-- Table 5 thêm vlan_id theo port, ở đây coi các in_port 1->5 thuộc vlan1, 6->10 thuộc vlan2, 11->15 thuộc vlan3, 16->20 thuộc vlan4. 21->dùng làm port trunk hoặc nối với router
+- Table 5 thêm vlan_id theo port, ở đây coi các in_port 1->5 thuộc vlan1, 6->10 thuộc vlan2, 11->15 thuộc vlan3, 16->20 thuộc vlan4. 21->24 dùng làm port trunk hoặc nối với router
 
 - Table 10 học địa chỉ MAC và VLAN từ các flow và lưu vào table 25
 
