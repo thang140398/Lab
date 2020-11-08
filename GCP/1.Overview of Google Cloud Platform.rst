@@ -1,0 +1,69 @@
+Overview of Google Cloud Platform
+====================================
+
+Google Cloud Platform (GCP) is a public cloud service that offers some of the same technologies used by Google to deliver its own products.
+
+Public cloud providers offer services that fall into four broad categories.
+
+- Compute resources
+
+- Storage
+
+- Networking
+
+- Specialized services such as Machine Learning Services
+
+Cloud customers typically make use of services in more than one of these categories.
+
+Compute Resources
+----------------
+
+Computing resources come in a variety of forms in public clouds.
+
+**Virtual Machines**
+
+Virtual Machines are a basic unit of computing resources and a good starting point for experimenting with the cloud. After you create an account with a cloud provider and provide billing information, you can use a portal or command-line tools to create VMs. Google Cloud Platform offers a variety of preconfigured VMs with varying numbers of vCPUs and amounts of memory. You can also create a custom configuration if the preconfigured offerings do not meet your needs.
+
+Once you create a VM, you can log into it and administer it as you like. You have full access to the VM, so you can configure file systems, add persistent storage, patch the operating system, or install additional packages. You decide what to run on the VM, who else will have access to it, and when to shut down the VM. A VM that you manage is like having a server in your office that you have full administrator rights to.
+
+Can create multiple VMs running different operating systems and applications. GCP also provides services, such as load balancers, that provide a single
+access point to a distributed back end. This is especially useful when you need to have high availability for your application. If one of the VMs in a cluster fails, the workload can be directed to the other VMs in the cluster. Autoscalers can add or remove VMs from the cluster based on the workload. This is called autoscaling. This helps both control cost by not running more VMs than needed and ensure that sufficient computing capacity is available when workloads increase.
+
+**Managed Kubernetes Clusters**
+
+Google Cloud Platform gives you all the tools you need to create and manage clusters of servers.
+
+Managed clusters make use of containers. A container is like a lightweight VM that isolates processes running in one container from processes running in another container on the same server.
+
+**Serverless Computing**
+
+Google Cloud Platform has two serverless computing options:
+
+- App Engine: is used for applications and containers that run for extended periods of time, such as a website backend, point-of-sale system, or custom business application.
+
+- Cloud Functions: is a platform for running code in response to an event, such as uploading a file or adding a message to a message queue.
+
+This serverless option works well when you need to respond to an event by running a short process coded in a function or by calling a longer-running application that might be running on a VM, managed cluster, or App Engine.
+
+Storage
+--------------
+
+Public clouds offer a few types of storage services that are useful for a wide range of application requirements. These types include the following:
+
+- Object storage
+
+- File storage
+
+- Block storage
+
+- Caches
+
+Enterprise users of cloud services will often use a combination of these services.
+
+**Object Storage**
+
+Object storage is a system that manages the use of storage in **terms of objects or blobs**. Usually these objects are files, but it is important to note that the files are not stored in a conventional file system. Objects are grouped into buckets. Each object is individually addressable, usually by a URL.
+
+**File Storage**
+
+
