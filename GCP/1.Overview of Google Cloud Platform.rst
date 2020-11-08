@@ -66,4 +66,12 @@ Object storage is a system that manages the use of storage in **terms of objects
 
 **File Storage**
 
+File storage services provide a **hierarchical storage system for files**. File systems storage provides network shared file systems. Google Cloud Platform has a file storage service called Cloud Filestore, which is based on the Network File System (NFS) storage system.
+
+**Block Storage**
+
+Block storage uses a fixed-size data structure called a **block** to organize data. Block storage is commonly used in ephemeral and persistent disks attached to VMs. With a block storage system, you can install file systems on top of the block storage, or you can run applications that access blocks directly. Some relational databases can be designed to access blocks directly rather working through file systems.
+
+**Caches**
+
 
