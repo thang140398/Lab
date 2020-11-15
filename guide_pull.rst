@@ -71,9 +71,15 @@ Ví dụ
   
 Tạo push request như sau
 
+- click vào pull request
+
 .. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-38-15.png
 
+- click vào create
+
 .. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-39-31.png
+
+- Đặt tên và click vào create
 
 .. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-40-10.png
 
