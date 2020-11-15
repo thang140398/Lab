@@ -8,11 +8,11 @@ Fork repository trên Github
 
 Tạo một bản copy của repository như sau. Truy cập vào repository theo link trên. Click vào button **Fork** ở góc phải màn hình
 
-.. figure::
+.. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-12-03.png
 
 Quá trình fork sẽ được thực hiện và Kết quả là đã fork thành công repository về tài khoản của mình
 
-.. figure::
+.. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-12-29.png
 
 Clone về máy
 -----------------------------
@@ -36,9 +36,9 @@ Các file .rst, .md sẽ để trong folder **source**
 
 Nếu cần thêm các mục thì thêm vào file **index.rst**
 
-.. figure::
+.. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-32-14.png
 
-.. figure::
+.. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-27-28.png
 
 Dùng lệnh sau để tạo file HTML
 
@@ -71,6 +71,11 @@ Ví dụ
   
 Tạo push request như sau
 
+.. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-38-15.png
+
+.. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-39-31.png
+
+.. figure:: https://raw.githubusercontent.com/thang140398/Lab/master/IMG_for_GuildPull/Screenshot%20from%202020-11-15%2017-40-10.png
 
 
 
